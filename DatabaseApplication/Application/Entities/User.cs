@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Application.Entities
 {
+    //No connection with other models...:
     public class User : BaseEntity
     {
         public User(string name, string nin) => (Name, Nin) = (name, nin);

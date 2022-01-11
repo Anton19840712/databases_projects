@@ -10,18 +10,25 @@ namespace Application.Repositories
     public class UserRepository : BaseRepository<User>, IRepositoryUser
     {
         public UserRepository(
-            IMongoClient mongoClient,
-            IClientSessionHandle clientSessionHandle) : base(mongoClient, clientSessionHandle, "user")
+            IMongoClient monGoClient,
+            IClientSessionHandle clientSessionHandle) : base(monGoClient, clientSessionHandle, "user")
         {
         }
 
         public async Task<User> GetUserAsync(string id)
         {
-            var filter = Builders<User>.Filter.Eq(f => f.Id, id);
-            return await Collection.Find(filter).FirstOrDefaultAsync();
+            var filter = Builders<User>
+                .Filter
+                .Eq(f => f.Id, id);
+
+            return await Collection
+                .Find(filter)
+                .FirstOrDefaultAsync();
         }
 
         public async Task<IEnumerable<User>> GetUsersAsync() =>
-            await Collection.AsQueryable().ToListAsync();
+            await Collection
+                .AsQueryable()
+                .ToListAsync();
     }
 }

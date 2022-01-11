@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces.Base
 {
+    //Nothing complex here...:
     public interface IRepositoryBase<T> where T : BaseEntity
     {
         Task InsertAsync(T obj);

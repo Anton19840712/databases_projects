@@ -12,6 +12,7 @@ namespace Application.Entities
         public string Name { get; }
 
         [BsonElement("books")]
+        //navigation property pattern...:
         public IEnumerable<Book> Books { get; }
     }
 }

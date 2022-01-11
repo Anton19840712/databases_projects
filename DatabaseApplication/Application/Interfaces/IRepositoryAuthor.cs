@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
+    //Nothing complex here...:
     public interface IRepositoryAuthor : IRepositoryBase<Author>
     {
         Task<IEnumerable<Book>> GetBooksAsync(string id);
