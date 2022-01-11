@@ -1,0 +1,17 @@
+[Many to many relationship]:
+---------------------------
+BOTH CLASSES INSTANCIES IN THE MIDDLE TABLE
+INSTANCE OF A MIDDLE TABLE IN EACH ANOTHER INSTANCE AS AN ICOLLECTION OF MIDDLE INSTANCE
+
+
+[One to many relationship]:
+--------------------------
+ENTITY ICOLLECTION IN A KEY/DRIVE INSTANCE ONLY
+
+[One to one relationship]:
+--------------------------
+BOTH ENTITIES
+
+- Use Key and Foreign Key attributes for each instance.
+- General coupling: inbuild another entity in each other. 
+

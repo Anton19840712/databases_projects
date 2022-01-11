@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace MonGo
+namespace ManyToMany
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
