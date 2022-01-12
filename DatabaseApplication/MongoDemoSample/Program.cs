@@ -18,6 +18,8 @@ namespace MongoDemoSample
     {
         public static void Main(string[] args)
         {
+            //IMongoQuery query = Query.NE("_id", "");
+
             MonDatabaseCrud db = new MonDatabaseCrud("AddressBook");
 
             //var result = db.LoadRecords<PersonModel>("Users");

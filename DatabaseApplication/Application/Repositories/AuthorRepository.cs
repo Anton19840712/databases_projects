@@ -17,6 +17,7 @@ namespace Application.Repositories
 
         public async Task<Author> GetAuthorByIdAsync(string id)
         {
+            // Here you can see, that you do not use (string) object, but just id
             var filter = Builders<Author>
                 .Filter
                 .Eq(s => s.Id, id);
@@ -29,16 +30,23 @@ namespace Application.Repositories
 
         public async Task<IEnumerable<Book>> GetBooksAsync(string authorId)
         {
+            //we create here author as a filter...:
+
             var filter = Builders<Author>
                 .Filter
                 .Eq(s => s.Id, authorId);
 
+
             return await Collection
-                .Find(filter)
-                .Project(p => p.Books)
+                .Find(filter)//we take this author...:
+
+                .Project(p => p.Books)//Pay attention, that here you can see something similar to mapping...:
+                //and project his books to the inside collection...:
+
                 .FirstOrDefaultAsync();
         }
 
+        //Here the code is also trivial...:
         public async Task<IEnumerable<Author>> GetAuthorsByNameAsync(string name)
         {
             var filter = Builders<Author>

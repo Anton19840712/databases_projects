@@ -15,6 +15,7 @@ namespace Application.Repositories
         {
         }
 
+        //Trivial...:
         public async Task<User> GetUserAsync(string id)
         {
             var filter = Builders<User>
@@ -26,6 +27,7 @@ namespace Application.Repositories
                 .FirstOrDefaultAsync();
         }
 
+        //Trivial..:
         public async Task<IEnumerable<User>> GetUsersAsync() =>
             await Collection
                 .AsQueryable()

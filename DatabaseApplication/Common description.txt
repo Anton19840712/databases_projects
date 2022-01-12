@@ -15,3 +15,13 @@ BOTH ENTITIES
 - Use Key and Foreign Key attributes for each instance.
 - General coupling: inbuild another entity in each other. 
 
+
+
+=====
+PLAN:
+
+1) Использовать транзакции для создания апи на монго.
+2) Широко использовать модификаторы в фильтрах.
+3) Статьи реализовать, разобрать.
+4) Брать метанит - смотреть с него реализации.
+5) Как в проекте использовать filters в рамках approach of unit of work pattern...
