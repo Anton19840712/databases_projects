@@ -1,4 +1,6 @@
-﻿namespace ManyToMany.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace ManyToMany.Models
 {
     class AuthorBiographiesContext : DbContext
     {

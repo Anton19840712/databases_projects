@@ -95,3 +95,55 @@ METHODS OF MONGO COLLECTION...........:
 //WithReadPreference()
 //WithWriteConcern()
 
+//OPERATORS...:
+----------------------
+All
+And
+AnyEq // any means for array...
+AnyGt
+AnyGte
+AnyIn
+AnyLt
+AnyLte
+AnyNe
+AnyNin
+BitsAllClear
+BitsAllSet
+BitsAnyClear
+BitsAnySet
+ElemMatch
+Eq // for text search...
+Exists
+GeoIntersects
+GeoWithin
+GeoWithinBox
+GeoWithinCenter
+GeoWithinCenterSphere
+GeoWithinPolygon
+Gt
+Gte
+In //Builders<Person>.Filter.In("Age", new List<BsonInt32>() { 23, 25, 27 });
+JsonSchemaBsonDocument schema
+Lt
+Lte
+Mod
+Ne - не равно
+Near
+NearSphere
+Nin - not in
+NotFilterDefinition
+OfType
+OfType<TDerived> where TDerived : TDocument
+Or
+Regex
+Size
+SizeGt
+SizeGte
+SizeLt
+SizeLte
+Text
+Textstring search, string language
+Type
+Where
+
+

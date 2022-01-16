@@ -1,4 +1,6 @@
-﻿namespace OneToOne.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace OneToOne.Models
 {
     class FluentAuthorContext : DbContext
     {

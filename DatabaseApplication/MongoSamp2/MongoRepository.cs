@@ -22,6 +22,17 @@ namespace MongoSamp2
         }
         #endregion
 
+        #region UPDATE SPECIFIC IN ALL OBJECT _DOESNOT WORK NEED CORRECTIONS
+        public async Task<UpdateResult> UpdateManyInMany(string table)
+        {
+            //1 get collection first as usual...:
+            var collection = _monGoRepository.GetCollection<Person>(table);
+            var filter = Builders<Person>.Filter.Eq(x => x.Id, 1);
+            var update = Builders<Person>.Update.Set("Friends.$[f].Name", "Maria");
+            return await collection.UpdateOneAsync(filter, update);
+        }
+        #endregion
+
         #region UPDATE SPECIFIC BY ID IN ONE OBJECT
         public async Task<UpdateResult> UpdateManyByArrayOfIdFiltering(string table)
         {

@@ -1,4 +1,6 @@
-﻿namespace OneToMany.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace OneToMany.Models
 {
     class AuthorBiographiesContext : DbContext
     {

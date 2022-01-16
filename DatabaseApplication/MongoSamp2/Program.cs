@@ -12,11 +12,15 @@ namespace MongoSamp2
         static async Task Main(string[] args)
         {
             var monGoRepository = new MonGoRepository("test"); //point the database we are going to connect
+            
+            //↓ updating by filtering studies...:15 1 2022
+            var rew = await monGoRepository.UpdateManyInMany("persons");
+            //↑ updating by filtering studies...:15 1 2022
 
             //var collection = monGoRepository.ListAllRecords("cities");
 
             //↓ updating by filtering studies...:15 1 2022
-            var rew = await monGoRepository.UpdateManyByArrayOfIdFiltering("persons");
+            //var rew = await monGoRepository.UpdateManyByArrayOfIdFiltering("persons");
             //↑ updating by filtering studies...:15 1 2022
 
 
