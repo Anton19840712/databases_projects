@@ -46,15 +46,16 @@ namespace Application.Repositories.Base
                 .Filter
                 //so many variances of filter modifiers there...:
 
-                .Eq(
-                    func, //this something we get from id of the object...:
+                .Eq(func, //this something we get from id of the object...:
                     value //result of implicit conversion to string -> it was an object...:
-                    );
+                );
+
+
 
             //------------------- Here my tests with queries...:
 
-            var filter1 = Builders<T>
-                .Filter
+            //var filter1 = Builders<T>
+            //    .Filter.
                 //WHAT DOES THE FILTER CONSISTS OF ELSE...?
 
                 //so many variances of filter modifiers there...:
@@ -62,7 +63,7 @@ namespace Application.Repositories.Base
                 //.Eq(
                 //    func, //this something we get from id of the object...:THIS IS THE FILTER CRITERIA (HERE THIS IS ID)
                 //    value //result of implicit conversion to string -> THIS IS THE OBJECT...:
-                );
+                //);
 
             //-------------------
 
