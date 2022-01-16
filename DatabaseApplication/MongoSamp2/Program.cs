@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Net;
-using System.Threading.Channels;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Driver;
-using MongoDB.Driver.Linq;
 
 //https://www.niceonecode.com/Blog/64/Left-Join-in-MongoDB-using-the-CSharp-driver-and-LINQ
 
@@ -19,7 +13,7 @@ namespace MongoSamp2
         {
             var monGoRepository = new MonGoRepository("test"); //point the database we are going to connect
 
-            var collection = monGoRepository.ListAllRecords("cities");
+            //var collection = monGoRepository.ListAllRecords("cities");
 
             //↓ updating by filtering studies...:15 1 2022
             var rew = await monGoRepository.UpdateManyByArrayOfIdFiltering("persons");
@@ -42,7 +36,7 @@ namespace MongoSamp2
 
 
             //↓ filtering studies...:15 1 2022
-            //var collection = monGoRepository.FilterCollectionByTextField("cities");
+            //var collection = await monGoRepository.FilterCollectionByTextField("cities");
             //collection.ForEach(Console.WriteLine);
             //↑ filtering studies...:15 1 2022
 

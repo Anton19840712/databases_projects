@@ -28,9 +28,12 @@ namespace MongoSamp2
             //1 get collection first as usual...:
             var collection = _monGoRepository.GetCollection<Person>(table);
 
+            //{"Friends.Name":"Irina"}??
+            //var filter2 = new BsonDocument("Friends.Name", "Irina");??
+
             var filter = Builders<Person>.Filter.Eq(x => x.Id, 1);//заходим в единицу
 
-            var update = Builders<Person>.Update.Set("Friends.$[f].Name", "Irina"); //будем обновлять там "Bob"
+            var update = Builders<Person>.Update.Set("Friends.$[f].Name", "Maria"); //будем обновлять там "Bob"
                                                                                     // но по отдельным идентификаторам
                                                                                     //alternative way
                                                                                     //var arrayFilters = new[]
@@ -46,6 +49,7 @@ namespace MongoSamp2
             };
 
             return await collection.UpdateOneAsync(filter, update, new UpdateOptions { ArrayFilters = arrayFilters });
+            //return await collection.UpdateManyAsync(filter2, update); ??
         }
         #endregion
         
@@ -104,7 +108,8 @@ namespace MongoSamp2
         #endregion
 
         #region SIMPLE FILTERING BY TEXT FIELD
-        public List<string> FilterCollectionByTextField(string table)
+        //public async Task<List<string>> FilterCollectionByTextField(string table)
+        public async Task<List<Cities>> FilterCollectionByTextField(string table)
         {
             //1) collecting...:
             var collection = _monGoRepository.GetCollection<Cities>(table);
@@ -117,11 +122,16 @@ namespace MongoSamp2
             //3) filtering...:
             var results = collection.Find(Builders<Cities>.Filter.Text("Brest")).ToList().Select(x => x.City);
 
-            var results2 = collection.AsQueryable()
+            var results2 = await collection.AsQueryable()
                 .Where(_ => filter.Inject())//you can use inject extension method to 
-                .Select(x => x.City).ToList();
+                .Select(x => x.City).ToListAsync();
 
-            return results2;
+            //alternatively - можно просто обойтись без билдеров.
+            var filter2 = new BsonDocument("City", "Brest"); // так нативнее, мне кажется... когда без билдера.
+            var people = await collection.Find(filter2).ToListAsync();
+
+            //return people;
+            return people;
         } 
         #endregion
 
@@ -144,8 +154,10 @@ namespace MongoSamp2
         public List<Cities> ListAllRecords(string table)
         {
             var collection = _monGoRepository.GetCollection<Cities>(table);
+            //alternatively var filter = new BsonDocument();
+            //collection.Find(filter).ToList();
 
-            return (List<Cities>)collection.Find(new BsonDocument()).ToList();
+            return collection.Find(new BsonDocument()).ToList();
         }
 
         public void UpdateByInsertRecords<T>(string table, ObjectId id, T record)
