@@ -134,14 +134,14 @@ namespace MongoSamp2
             return collection.Find(filter).First();
         }
 
-        public void InsertRecord<T>(string table, T record)
+        public void InsertModel<T>(string table, T record)
         {
             var collection = _monGoRepository.GetCollection<T>(table);
 
             collection.InsertOne(record);
         }
 
-        public List<T> FindRecords<T>(string table)
+        public List<T> ListAllRecords<T>(string table)
         {
             var collection = _monGoRepository.GetCollection<T>(table);
 

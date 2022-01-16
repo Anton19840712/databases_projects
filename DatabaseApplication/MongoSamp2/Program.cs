@@ -47,13 +47,13 @@ namespace MongoSamp2
 
 
             //case sensitive on "cities" and name of fields also.
-            //var result = monGoRepository.FindRecords<Cities>("cities");
+            //var result = monGoRepository.ListAllRecords<Cities>("cities");
 
 
 
 
 
-            //var result = monGoRepository.FindRecords<CountriesDto>("countries");
+            //var result = monGoRepository.ListAllRecords<CountriesDto>("countries");
 
             //var countriesWithCitiesList = monGoRepository.JoinTables("countries");
 
