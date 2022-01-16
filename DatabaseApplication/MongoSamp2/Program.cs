@@ -19,9 +19,10 @@ namespace MongoSamp2
         {
             var monGoRepository = new MonGoRepository("test"); //point the database we are going to connect
 
+            var collection = monGoRepository.ListAllRecords("cities");
 
             //↓ updating by filtering studies...:15 1 2022
-            //var rew = await monGoRepository.UpdateManyByArrayOfIdFiltering("persons");
+            var rew = await monGoRepository.UpdateManyByArrayOfIdFiltering("persons");
             //↑ updating by filtering studies...:15 1 2022
 
 

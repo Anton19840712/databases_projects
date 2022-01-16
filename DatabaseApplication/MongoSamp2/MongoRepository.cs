@@ -141,11 +141,11 @@ namespace MongoSamp2
             collection.InsertOne(record);
         }
 
-        public List<T> ListAllRecords<T>(string table)
+        public List<Cities> ListAllRecords(string table)
         {
-            var collection = _monGoRepository.GetCollection<T>(table);
+            var collection = _monGoRepository.GetCollection<Cities>(table);
 
-            return collection.Find(new BsonDocument()).ToList();
+            return (List<Cities>)collection.Find(new BsonDocument()).ToList();
         }
 
         public void UpdateByInsertRecords<T>(string table, ObjectId id, T record)
