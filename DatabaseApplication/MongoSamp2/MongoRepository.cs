@@ -44,15 +44,17 @@ namespace MongoSamp2
 
             var filter = Builders<Person>.Filter.Eq(x => x.Id, 1);//заходим в единицу
 
-            var update = Builders<Person>.Update.Set("Friends.$[f].Name", "Maria"); //будем обновлять там "Bob"
-                                                                                    // но по отдельным идентификаторам
-                                                                                    //alternative way
-                                                                                    //var arrayFilters = new[]
-                                                                                    //{
-                                                                                    //    new BsonDocumentArrayFilterDefinition<BsonDocument>(
-                                                                                    //        new BsonDocument("f._id",
-                                                                                    //            new BsonDocument("$in", new BsonArray(new [] { 2, 4 })))),
-                                                                                    //};
+            var update = Builders<Person>.Update.Set("Friends.$[f].Name", "Maria"); 
+
+            //будем обновлять там "Bob"
+            // но по отдельным идентификаторам
+            //alternative way
+            //var arrayFilters = new[]
+            //{
+            //    new BsonDocumentArrayFilterDefinition<BsonDocument>(
+            //        new BsonDocument("f._id",
+            //            new BsonDocument("$in", new BsonArray(new [] { 2, 4 })))),
+            //};
 
             var arrayFilters = new[]
             {
@@ -64,6 +66,8 @@ namespace MongoSamp2
         }
         #endregion
         
+        //HERE
+
         #region UPDATE ALL IN ONE OBJECT
         public async Task<UpdateResult> UpdateManyFiltering(string table)
         {
@@ -72,7 +76,8 @@ namespace MongoSamp2
 
             var filter = Builders<Person>.Filter.Eq(x => x.Id, 1);//Update many in only one.
 
-            var update = Builders<Person>.Update.Set("Friends.$[].Name", "Veronica");//updates all names in node of Person with id = 1.
+            var update = Builders<Person>.Update.Set("Friends.$[].Name", "Veronica");
+            //updates all names in node of Person with id = 1.
 
             await collection.UpdateOneAsync(filter, update);
 
@@ -151,7 +156,7 @@ namespace MongoSamp2
             var collection = _monGoRepository.GetCollection<T>(table);
 
             var filter = Builders<T>.Filter.Eq("Id", id);
-
+            
             return collection.Find(filter).First();
         }
 

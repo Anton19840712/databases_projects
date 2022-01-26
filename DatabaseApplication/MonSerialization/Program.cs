@@ -8,6 +8,22 @@ using MongoDB.Driver;
 
 namespace MonSerialization
 {
+
+    public class Friend
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+    }
+
+
+    public class Member
+    {
+        public int Id { get; set; }
+        public int[] Friends { get; set; }
+    }
+
+
     public class Personality
     {
 
@@ -16,8 +32,8 @@ namespace MonSerialization
 
 
 
-        //[BsonRepresentation(BsonType.ObjectId)] how it should look in the database...:
-        [BsonId]
+        //[BsonRepresentation(BsonType.ObjectId)] //how it should look in the database...:
+        //[BsonId]
         [BsonElement("_id")]
         public long Id { get; set; }
 
@@ -117,26 +133,44 @@ namespace MonSerialization
 
             var mainMonGoRepository = clientMain.GetDatabase("test");
 
+            //GET 
+
+            //GET BY ID...:
+
+            //STACK OVERFLOW...:
+
+            //var item = await collection
+            //    .Find(Builders<ItemClass>.Filter.Eq("_id", id))
+            //    .FirstOrDefaultAsync();
+
+
+
             //getting collection...:
             var collection = mainMonGoRepository.GetCollection<Personality>("personalities");
 
             collection.InsertManyAsync(new[] { personInsert1, personInsert2 });
 
+            //collection.InsertOneAsync(person1);
+
+            var arrayOfFruits = new string[] { "apple", "banana", "peach" };
+            //collection.InsertOneAsync(person1);
+            //collection.InsertOneAsync();
+
             // ↑↑↑↑ insert many...
 
             // ✓✓✓✓ select all...:
             var collectionAll = mainMonGoRepository.GetCollection<Personality>("personalities");
-            var filter = new BsonDocument();
+            var filter = new BsonDocument();// -- mistake
             //CREATE EMPTY DOCUMENT...:WITHOUT FILTERS
-            using var cursor = collectionAll.FindAsync(filter).Result;
-            while (cursor.MoveNext()) //MoveNextAsync
-            {
-                var people = cursor.Current;
-                foreach (Personality doc in people)
-                {
-                    Console.WriteLine("{0} - {1} ({2})", doc.Id, doc.Name, doc.Age);
-                }
-            }
+            //using var cursor = collectionAll.FindAsync(filter).Result;
+            //while (cursor.MoveNext()) //MoveNextAsync
+            //{
+            //    var people = cursor.Current;
+            //    foreach (Personality doc in people)
+            //    {
+            //        Console.WriteLine("{0} - {1} ({2})", doc.Id, doc.Name, doc.Age);
+            //    }
+            //}
             // ↑↑↑↑ select all...
 
 
@@ -160,7 +194,17 @@ namespace MonSerialization
             //var filterFiltering = new BsonDocument("Age", new BsonDocument("$lt", 31));
 
             // GTE
-            //var filterFiltering = new BsonDocument("Age", new BsonDocument("$gte", 31));
+            // var elements = new BsonDocument("Age", new BsonDocument("$gte", 31));
+            // as a variant:
+            var elements = new BsonDocument("$and", new BsonArray{ //$ in не получится.
+
+                new BsonDocument("Age",new BsonDocument("$gte", 26)),
+                new BsonDocument("Age", new BsonDocument("$lt", 33))
+            });
+            var collectionNew = collectionForFiltering.FindAsync(elements).Result.ToList();
+            // see also DOUBLE FILTERING below...:
+            var aspects = Builders<Personality>
+                .Filter.Or(new List<FilterDefinition<Personality>> { elements });
 
 
             // OR =================================================
@@ -191,21 +235,82 @@ namespace MonSerialization
 
             // AND =================================================
 
-            // AND FROM ARRAY...:
-            var filter3 = Builders<Personality>.Filter.Eq("Name", "John");
-            var filter4 = Builders<Personality>.Filter.Eq("Age", 27);
-            //var filterFiltering = Builders<Personality>.Filter.And(new List<FilterDefinition<Personality>> { filter3, filter4 });
+            // AND FROM ARRAY OF FILTERING CRITERIA...:
+            //var filter3 = Builders<Personality>.Filter.Eq("Name", "Bill");
+            //var filter44 = Builders<Personality>.Filter.In("Age", new List<BsonInt32>() { 28, 51 }); //this is not diapason.
+            //var filter4 = Builders<Personality>.Filter.Not(Builders<Personality>.Filter.Eq("Surname", "Gridushko"));
 
+            // NOT: возвращает документы, которые не попадают под определенное условие - то есть все остальные, которые не противоречат условию:
+            // Если ты используешь только этот один фильтр, то он сработает как за исключением указанных критериев в фильтре.
+            // Заметь, что здесь можно встроить фильтр в фильтре.
+            //var filter4 = Builders<Personality>.Filter.Not(Builders<Personality>.Filter.Eq("Surname", "Gridushko"));
+
+            //Странно, но all не отработает, нужно in. Видимо, all работает только по array. Да, действительно, all - только для array.
+            //var filter434 = Builders<Personality>.Filter.All("Surname", new List<string>(){"Gridushko", "Gates"});
+            var filter434 = Builders<Personality>.Filter.In("Surname", new List<string>(){"Gridushko", "Gates"});
+            //var filter24 = Builders<Personality>.Filter.Eq("Surname", "Petrova");
+
+            //var filterFiltering34 = Builders<Personality>.Filter.Or(new List<FilterDefinition<Personality>> { filter3, filter4 });
+
+            //var filterFiltering334 = Builders<Personality>.Filter.And(new List<FilterDefinition<Personality>> { filter3, filter4 });
+
+
+            //combining filters...:
+            var filterFiltering2334 = Builders<Personality>.Filter.Or(
+                //filter3, 
+                //filter44, 
+                //filter24
+                //    ,
+                //filter4
+                filter434
+                );
+
+            var collectionNew3 = collectionForFiltering.FindAsync(filterFiltering2334).Result.ToList();
+
+
+            //===================ALL - работает только по array.
+
+            var collectionForFiltering23 = mainMonGoRepository.GetCollection<Member>("members");
+
+            var filter43Ew4 = Builders<Member>.Filter.All("Friends", new List<BsonInt32>(){1, 3});
+
+            var collectionNew33 = collectionForFiltering23.FindAsync(filter43Ew4).Result.ToList();
+
+
+            //===================ALL
             //EXISTS, NOT EXISTS, WHERE, REGEX,
             //SIZE -- All documents with a number of elements
+            //slice - , типа top 10. Или -10
+
+            //============slice
+
+            //too complex model for 
+
+            //var monGoRepository2 = new MonGoRepository("skishift,");
+
+            //var collectionForFiltering23e = monGoRepository2.GetCollection<Member>("members");
+
+            //var filter43Ew4e = Builders<Member>.Filter.All("Friends", new List<BsonInt32>() { 1, 3 });
+
+            //var collectionNew3ee3 = collectionForFiltering23.FindAsync(filter43Ew4e).Result.ToList();
+
+
+
+            //============slice
+
+
 
 
             Console.WriteLine("2ND NODE....:");
             //2 ND NODE...:
             //var filterFiltering = new BsonDocument("Company.Name", "Microsoft");// 2nd node
 
-            //ALL -- All documents with all array nodes...:
-            var filterFiltering = Builders<Personality>.Filter.All("Languages", new List<string>() { "English", "French" });
+            //ALL -- All documents with all array nodes...: -- работает только по массиву
+            var filterFiltering = Builders<Personality>.Filter.All("Languages", 
+                new List<string>()
+                {
+                    "English", "French"
+                });
 
             // ANY IN...:
             //var filterFiltering = Builders<Personality>.Filter.AnyIn("Languages", new List<string>() { "English", "French" });
@@ -339,11 +444,11 @@ namespace MonSerialization
             // ✓✓✓✓ UPDATE...:
 
             //AddToSet: Adds new element in the node
-            //Adds new elements to the document field that represents the array. For example, add a new line to the Languages array:
+            //ADDS NEW ELEMENTS to the document field that represents the array. For example, add a new line to the Languages array:
             Builders<BsonDocument>.Update.AddToSet("Languages", "Spanish");
 
             //Inc: Increments value. Let increase age by 2 
-            //Increments the value of a numeric property by the specified number of units. For example, let's increase the value of the Age property by two units:
+            //INCREMENTS the value of a numeric property by the specified number of units. For example, let's increase the value of the Age property by two units:
             Builders<BsonDocument>.Update.Inc("Age", 2);
 
             //Push: Adds new elements to the key that represents the array. For example:
@@ -359,15 +464,16 @@ namespace MonSerialization
 
             //PopLast: Selects the last element for a property that represents an array.
 
-            //Rename: Renames the name of the key in the document. For example, let's rename the Age field to Year:
+            //RENAMES THE NODE: Renames the name of the key in the document. For example, let's rename the Age field to Year:
             Builders<BsonDocument>.Update.Rename("Age", "Year");
 
             //When updating, keep in mind that we cannot change the _id field. ↓↓↓↓↓↓↓↓↓↓↓↓
 
-            // BY REPLACING...:
+            // BY REPLACING WITH THE FULL MODEL...:
             var collectionOfPersons = mainMonGoRepository.GetCollection<BsonDocument>("personalities");
 
-            var result34 = collectionOfPersons.ReplaceOneAsync(new BsonDocument("Name", "Tom"), //if in the collection a Bob name <------ replace the model where Bob with this one...:
+            var result34 = collectionOfPersons.ReplaceOneAsync(new BsonDocument("Name", "Tom"),
+                //if in the collection a Tom name <------ replace the model where Tom with this one...:
                 new BsonDocument
                 {
                     {"Name","Tom K."},
@@ -388,25 +494,29 @@ namespace MonSerialization
 
 
             // BY REPLACING USING REPLACE OPTIONS...:
-
-            var resultPersons = collectionOfPersons.ReplaceOneAsync(new BsonDocument("Name", "Bob"), //if in the collection a Bob name <------ replace the model where Bob with this one...:
-                new BsonDocument //to replace with it current document
-                {
-                    {"Name","Robert"},
-                    {"Age", 40},
-                    {"Languages", new BsonArray(new []{"english", "spanish"})},
-                    { "Company", new BsonDocument{{"Name" , "Bob&Ron Inc."}}
-                    }
-                }, new ReplaceOptions { IsUpsert = true }).Result;
+            // Эта хрень вставляет Роберта со схемой айди Object - потом ничего не получается запарсить. 
+            // Нужно удалить например, db.personalities.deleteOne({"Name":"Robert"}, {"Age":40})
+            //var resultPersons = collectionOfPersons.ReplaceOneAsync(new BsonDocument("Name", "Bob"), 
+            //    //if in the collection a Bob name <------ replace the model where Bob with this one...:
+            //    new BsonDocument //to replace with it current document
+            //    {
+            //        {"Name","Robert"},
+            //        {"Age", 40},
+            //        {"Languages", new BsonArray(new []{"english", "spanish"})},
+            //        { "Company", new BsonDocument{{"Name" , "Bob&Ron Inc."}}
+            //        }
+            //    }, new ReplaceOptions { IsUpsert = true }).Result;
 
             //{IsUpsert = true} <==== need to insert even if there is no matching data by criteria...:
             //If there is no such document - insert anyway a new one...:
 
-            Console.WriteLine("Id of the added object: {0}", resultPersons.UpsertedId); //<---------with UpsertedId we can get the Id of a newly inserted object...<---------
+            //Console.WriteLine("Id of the added object: {0}", resultPersons.UpsertedId);
+            //<---------with UpsertedId we can get the Id of a newly inserted object...<---------
 
 
             //UPDATE ONE ASYNC...:
 
+            //Could not use previous time, but using builder was ok
             //var result45 = collectionOfPersons.UpdateOneAsync(
             //    new BsonDocument("Name", "Tom"), //filter from: <---------
             //    new BsonDocument("$set", new BsonDocument("Age", 28))).Result; //to data: <---------
@@ -417,6 +527,20 @@ namespace MonSerialization
             //var result123T = collection.UpdateOneAsync(
             //    new BsonDocument("Name", "Robert"),
             //    new BsonDocument("$inc", new BsonDocument("Age", 2))).Result;
+
+            //===========
+
+            //REAL SAMPLE
+            //_ret = await _unitOfWork.GetCollection<Deal>("Deal")
+            //    .UpdateOneAsync(
+            //        Builders<Deal>.Filter.Eq("_id", id),
+            //        Builders<Deal>.Update.Set("dealPipeLine", DealPipeLine.DealIsOver)
+            //    );
+
+            //_code = HttpStatusCode.OK;
+
+            //===========
+
 
             ////THE SAME, BUT WITH USING OF BUILDER...:
 
@@ -547,7 +671,7 @@ namespace MonSerialization
         }
     }
 
-    class Employee
+    public class Employee
     {
         public string Name { get; set; }
         public int Age { get; set; }
