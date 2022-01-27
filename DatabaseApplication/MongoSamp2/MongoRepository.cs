@@ -58,6 +58,8 @@ namespace MongoSamp2
 
             var arrayFilters = new[]
             {
+                //Насколько я понимаю, установи для айдишников во френдс под номерами
+                //2 и 4 значение Мария для поля имени.
                 new JsonArrayFilterDefinition<BsonDocument>(@"{ ""f._id"" : { $in : [ 2, 4 ] } }")
             };
 

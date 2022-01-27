@@ -144,6 +144,24 @@ namespace MonSerialization
             //    .FirstOrDefaultAsync();
 
 
+            // ✓✓✓✓ FIND AND UPDATE ASYNC...:
+
+            //var filterDeal =
+            //    Builders<UserProfile>.Filter.Eq("_id", dealId) &
+            //    Builders<UserProfile>.Filter.Eq("documents.documentId", documentId);
+
+            //var update = Builders<UserProfile>.Update.Set("documents.$[].verificationStatus", enumToInsert);
+
+            //var resultOfStatusChanging = (await _unitOfWork.GetCollection<UserProfile>("UserProfile")
+            //        .FindOneAndUpdateAsync(filterDeal, update.CurrentDate("LastModified"), new FindOneAndUpdateOptions<UserProfile> { ReturnDocument = ReturnDocument.After }))
+            //    .Documents.FirstOrDefault(x => x.DocumentId == documentId)?.VerificationStatus;
+
+            //_ret = $"Verification status of the file was updated to {resultOfStatusChanging}";
+
+            //_code = 200;
+
+
+            // ↑↑↑↑ insert many...
 
             //getting collection...:
             var collection = mainMonGoRepository.GetCollection<Personality>("personalities");
@@ -156,7 +174,9 @@ namespace MonSerialization
             //collection.InsertOneAsync(person1);
             //collection.InsertOneAsync();
 
-            // ↑↑↑↑ insert many...
+            // ↑↑↑↑ FIND AND UPDATE ASYNC...
+
+
 
             // ✓✓✓✓ select all...:
             var collectionAll = mainMonGoRepository.GetCollection<Personality>("personalities");
@@ -464,7 +484,7 @@ namespace MonSerialization
 
             //PopLast: Selects the last element for a property that represents an array.
 
-            //RENAMES THE NODE: Renames the name of the key in the document. For example, let's rename the Age field to Year:
+            //NODE RENAMING: Renames the name of the key in the document. For example, let's rename the Age field to Year:
             Builders<BsonDocument>.Update.Rename("Age", "Year");
 
             //When updating, keep in mind that we cannot change the _id field. ↓↓↓↓↓↓↓↓↓↓↓↓
@@ -546,6 +566,7 @@ namespace MonSerialization
 
             //// filter parameter...:
             //var filterLa = Builders<BsonDocument>.Filter.Eq("Name", "Tom");
+
             //// update parameter...:
             //var updateLa = Builders<BsonDocument>.Update.Set("Age", 30);
             //var result434 = collectionOfPersons.UpdateOneAsync(filterLa, updateLa).Result;
