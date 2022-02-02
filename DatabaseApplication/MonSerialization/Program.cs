@@ -176,11 +176,45 @@ namespace MonSerialization
 
             // ↑↑↑↑ FIND AND UPDATE ASYNC...
 
+            //MATCH SAMPLE
+            //db.Trip.aggregate([ {$match: { countOffers: "2"} } ]) //{"countOffers":"2"}
+
+            //PROJECTION SAMPLE
+
+            //var projection = Builders<DealForIdDto>.Projection
+            //    .Include(x => x.Id)
+            //    .Include(x => x.TripId);
+
+            //var projectionTrip = Builders<Trip>.Projection
+            //    .Include(x => x.Id)
+            //    .Include(x => x.StartDate)
+            //    .Include(x => x.EndDate);
+
+            //var allDealResults = await _unitOfWork.GetCollection<DealForIdDto>("Deal")
+            //    .Find(Builders<DealForIdDto>.Filter.Empty)
+            //    //.Project(projection)
+            //    .ToListAsync()
+            //    .ConfigureAwait(false);
+
+            ////.Project("{startDate:1, endDate:1}")
+            //var allTripsResults = await _unitOfWork.GetCollection<TripForIdDto>("Trip")
+            //    .Find(Builders<TripForIdDto>.Filter.Empty)
+            //    //.Project(projectionTrip)
+            //    .ToListAsync()
+            //    .ConfigureAwait(false);
+
+            //foreach (var element in allDealResults)
+            //{
+
+            //    Console.WriteLine(element);
+            //}
+
+
 
 
             // ✓✓✓✓ select all...:
             var collectionAll = mainMonGoRepository.GetCollection<Personality>("personalities");
-            var filter = new BsonDocument();// -- mistake
+            var filter = new BsonDocument();// -- mistake dont USE!!!
             //CREATE EMPTY DOCUMENT...:WITHOUT FILTERS
             //using var cursor = collectionAll.FindAsync(filter).Result;
             //while (cursor.MoveNext()) //MoveNextAsync
@@ -394,6 +428,7 @@ namespace MonSerialization
 
             Console.WriteLine();
             Console.WriteLine("PROJECTION...");
+            //db.students.find({}, {roll:1, _id:0}) 1- выберет все поля, 0 - не выберет это поле.
             var personalitiesCol = collection.Find(new BsonDocument()).Project("{Name:1, Age:1, _id:0}").ToListAsync().Result;
             personalitiesCol.ForEach(Console.WriteLine);
 
