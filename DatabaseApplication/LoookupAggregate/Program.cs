@@ -1,25 +1,9 @@
-﻿using System;
-using MongoDB.Bson;
+﻿using Mongo.DAL.Models;
 using MongoDB.Driver;
-
+//https://www.niceonecode.com/blog/72/mongodb-aggregation-array-to-object-id-with-three-collections-many-to-one-to-one-using-lookup
 namespace LoookupAggregate
 {
-    public class Countries
-    {
-        public ObjectId Id { get; set; }
-        public string Country { get; set; }
-        public long CountryArea { get; set; }
-        public int CountryNumber { get; set; }
-    }
 
-    public class Cities
-    {
-        //public ObjectId Id { get; set; }
-        public ObjectId Id { get; set; }
-        public string City { get; set; }
-        public long Population { get; set; }
-        public int CountryId { get; set; }
-    }
     class Program
     {
         static void Main(string[] args)
@@ -33,6 +17,26 @@ namespace LoookupAggregate
             var result = mongoCollection.Aggregate()
                 .Lookup("cities", "CountryNumber", "CountryId", @as: "countiesWithTheirCities")
                 .ToListAsync().Result;
+
+
+            //var group = new BsonDocument
+            //{
+            //    { "_id", "$_id" },
+            //    { "root", new BsonDocument{ { "$mergeObjects", "$$ROOT" } } },
+            //    {  "items", new BsonDocument{ { "$push", "$items" } } }
+            //};
+
+            //для потенциального изучения.
+            //var orders = monGoRepository.GetCollection("orders").Aggregate()
+            //    .Lookup("items", "items.itemId", "_id", @as: "items")
+            //    .Unwind("items", new AggregateUnwindOptions<ItemDetail>() { PreserveNullAndEmptyArrays = true })
+            //    .Lookup("vendors", "items.vendorId", "_id", @as: "items.vendor")
+            //    .Unwind("items.vendor", new AggregateUnwindOptions<VendorDetail>() { PreserveNullAndEmptyArrays = true })
+            //    .Group(group)
+            //    .ReplaceRoot<object>("{$mergeObjects:['$root', '$$ROOT']}")
+            //    .Project("{root:0}")
+            //    .As<OrderDetail>().ToEnumerable();
+
         }
     }
 }

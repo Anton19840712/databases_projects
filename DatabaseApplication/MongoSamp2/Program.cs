@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+using Mongo.DAL.Models;
 
 //https://www.niceonecode.com/Blog/64/Left-Join-in-MongoDB-using-the-CSharp-driver-and-LINQ
 
@@ -70,69 +69,10 @@ namespace MongoSamp2
 
             //3) Указываешь таблицу, указываешь айди модели, указываешь документ\рекорд\модель для обновления
             //monGoRepository.UpdateByInsertRecords("cities", oneRec.Id, oneRec);
-
-
-
-
         }
     }
 
-    public class Person
-    {
-        public int Id { get; set; }
-
-        public Friend[] Friends { get; set; }
-    }
-
-    public class Friend
-    {
-        public int Id { get; set; }
-
-        public string Name { get; set; }
-    }
-
-
-    public class Member
-    {
-        public int Id { get; set; }
-        public int[] Friends { get; set; }
-    }
-
-
-    [BsonIgnoreExtraElements]
-    public class CountriesDto
-    { 
-        public ObjectId Id { get; set; }
-        public string Country { get; set; }
-        public int CountryNumber { get; set; }
-    }
-
-    public class Countries
-    {
-        [BsonId] // Оно мало что дает, может сгенерировать просто нули для свойства Guid
-        public ObjectId Id { get; set; }
-        public string Country { get; set; }
-        public long CountryArea { get; set; }
-        public int CountryNumber { get; set; }
-    }
-
-    public class Cities
-    {
-        //public ObjectId Id { get; set; }
-        public ObjectId Id { get; set; }
-        public string City { get; set; }
-        public long Population { get; set; }
-        public int CountryId { get; set; }
-    }
-
-
-    public class CitiesDto
-    {
-        public ObjectId Id { get; set; }
-        public string City { get; set; }
-        public int CountryId { get; set; }
-    }
-
+    
     public class CountriesCities : Countries
     {
         public IEnumerable<Cities> CountriesWithTheirCities { get; set; }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
@@ -176,8 +175,69 @@ namespace MonSerialization
 
             // ↑↑↑↑ FIND AND UPDATE ASYNC...
 
+
+
             //MATCH SAMPLE
+            //=====================
             //db.Trip.aggregate([ {$match: { countOffers: "2"} } ]) //{"countOffers":"2"}
+
+            //db.cities.aggregate([
+            //{ $match: { "City": { $in: ["Kiev", "Moskow"] } } }
+            //])
+
+            //another:
+            //db.cities.aggregate([
+            //{
+            //    $match:
+            //    {
+            //        "continent": { $in: ["North America", "Asia"] }
+            //    }
+            //},
+            //{
+            //    $sort: { "population": -1 }
+            //},
+            //{
+            //    $group:
+            //    {
+            //        "_id": {
+            //            "continent": "$continent",
+            //            "country": "$country"
+            //        },
+            //        "first_city": { $first: "$name" },
+            //        "highest_population": { $max: "$population" }
+            //    }
+            //},
+            //{
+            //    $match:
+            //    {
+            //        "highest_population": { $gt: 20.0 }
+            //    }
+            //}
+            //])
+
+
+            //=====================
+
+
+            //LOOKUP
+            // Аналогичные запросы в разном синтаксисе.
+            //var tripCollection = _unitOfWork.GetCollection<Trip>("Trip");
+
+            //var elements = await _unitOfWork
+            //    .GetCollection<Trip>("Trip").Aggregate()
+            //    .Lookup(
+            //        "Deal",
+            //        "_id",
+            //        "tripId",
+            //        "tripsWithTheirDeals")
+            //    .Project(Builders<BsonDocument>.Projection.Exclude("_id"))
+            //    .ToListAsync();
+
+
+            //var results = tripCollection.Aggregate().Lookup("Deal", "_id", "tripId", @as: "tripsWithTheirDeals").ToListAsync().Result;
+            //var res34 = await tripCollection.Aggregate().Lookup("Deal", "_id", "tripId", @as: "tripsWithTheirDeals").ToListAsync();
+
+
 
             //PROJECTION SAMPLE
 
