@@ -50,6 +50,16 @@ namespace AggregateMonGo
             //    .ReplaceRoot<object>("{$mergeObjects:['$root', '$$ROOT']}")
             //    .Project("{root:0}")
             //    .As<OrderDetail>().ToEnumerable();
+
+
+            //_ret = elements.Aggregate()
+            //    .Match(filterDefinition)
+            //    .Unwind<Deal, DealUnwindDto>(r => r.Offers)
+            //    .Lookup("Parcel",
+            //        "offers._id",
+            //        "offerId", @as:
+            //        "dealsAndOffersWithTheirParcels")
+            //    .ToListAsync().Result;
         }
     }
 }

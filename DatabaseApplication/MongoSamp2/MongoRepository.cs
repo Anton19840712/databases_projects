@@ -95,6 +95,7 @@ namespace MongoSamp2
             //1 get collection first as usual...:
             var collection = _monGoRepository.GetCollection<Person>(table);
 
+            //как я понимаю, здесь сработает, только если идти через общий нод.
             var filter = Builders<Person> //идем в таблицу Person
                             .Filter.Eq(x => x.Id, 1) &  // берём в ней обект с айди == 1
                         Builders<Person>

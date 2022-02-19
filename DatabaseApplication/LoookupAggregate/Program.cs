@@ -41,6 +41,19 @@ namespace LoookupAggregate
             //    }
             //    ]
             //}
+
+
+            //// REAL SAMPLE:
+            //var mongoCountriesCollection = _unitOfWork.Parcel;
+
+            //var elements = _unitOfWork.Deal
+            //    .Aggregate()
+            //    .Lookup(
+            //        "Parcel",
+            //        "offers._id",
+            //        "offerId", @as:
+            //        "dealsAndOffersWithTheirParcels")
+            //    .ToListAsync().Result;
         }
     }
 }

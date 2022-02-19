@@ -5,6 +5,20 @@ using System.Linq;
 using System.Text.Json;
 using Mongo.DAL.UnwindModel;
 using MongoDB.Bson;
+//Попробуй с конкретных примеров в документации...:
+//db.salaries.insertMany([
+//{ "_id" : 1, employee: "Ant", dept: "A", salary: 100000, fiscal_year: 2017 },
+//{ "_id" : 2, employee: "Bee", dept: "A", salary: 120000, fiscal_year: 2017 },
+//{ "_id" : 3, employee: "Cat", dept: "Z", salary: 115000, fiscal_year: 2017 },
+//{ "_id" : 4, employee: "Ant", dept: "A", salary: 115000, fiscal_year: 2018 },
+//{ "_id" : 5, employee: "Bee", dept: "Z", salary: 145000, fiscal_year: 2018 },
+//{ "_id" : 6, employee: "Cat", dept: "Z", salary: 135000, fiscal_year: 2018 },
+//{ "_id" : 7, employee: "Gecko", dept: "A", salary: 100000, fiscal_year: 2018 },
+//{ "_id" : 8, employee: "Ant", dept: "A", salary: 125000, fiscal_year: 2019 },
+//{ "_id" : 9, employee: "Bee", dept: "Z", salary: 160000, fiscal_year: 2019 },
+//{ "_id" : 10, employee: "Cat", dept: "Z", salary: 150000, fiscal_year: 2019 }
+//])
+
 
 namespace MergeMonGo
 {
@@ -56,10 +70,12 @@ namespace MergeMonGo
 
             var listPersonByAgeMoreThane34 = mongoCollectionPersons.Find(filterDefinitionPersonByEmployee).ToList();
 
+
+
             var mergeOptions = new MergeStageOptions<Person>
             {
                 OnFieldNames = new[] { "_id" },
-                WhenMatched = MergeStageWhenMatched.Replace, //so, you replace from salaries? all ids, that are in persons.
+                WhenMatched = MergeStageWhenMatched.Merge, //so, you replace from salaries? all ids, that are in persons.
                 WhenNotMatched = MergeStageWhenNotMatched.Insert
             };
 
@@ -82,9 +98,6 @@ namespace MergeMonGo
             //    .Unwind<Personality, PersonalityUnwind>(r => r.Friends).ToListAsync().Result;
             // System.AggregateException: 'Element 'Friends' does not match any field or property of class Mongo.DAL.Models.Salaries.'
             // You try to merge 
-
-
-
 
             //var jsonString = JsonSerializer.Serialize(items);
 
