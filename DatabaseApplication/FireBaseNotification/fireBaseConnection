@@ -1,0 +1,11 @@
+﻿<script>
+	const firebaseConfig = {
+	  apiKey: "AIzaSyCYY93TAc47XlS5tZnxdeHtzWND591tZNE",
+	  authDomain: "notificationsample-fac93.firebaseapp.com",
+	  projectId: "notificationsample-fac93",
+	  storageBucket: "notificationsample-fac93.appspot.com",
+	  messagingSenderId: "976887879131",
+	  appId: "1:976887879131:web:906089e6c4c429ea1583fe"
+	};
+</script>
+

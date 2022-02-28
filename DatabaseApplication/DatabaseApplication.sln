@@ -36,7 +36,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AggregateMonGo", "Aggregate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeMonGo", "MergeMonGo\MergeMonGo.csproj", "{49AEF026-2010-40F6-959E-17998E9CCC3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGuidFieldFromMongo", "TestGuidFieldFromMongo\TestGuidFieldFromMongo.csproj", "{60F989AF-9F43-47A2-863B-E0F2026DF0F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGuidFieldFromMongo", "TestGuidFieldFromMongo\TestGuidFieldFromMongo.csproj", "{60F989AF-9F43-47A2-863B-E0F2026DF0F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FirebaseProjects", "FirebaseProjects", "{DEFFC79F-7B03-440E-821B-03BD1F329AB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireBaseNotification", "FireBaseNotification\FireBaseNotification.csproj", "{C29A2850-E141-493A-8F30-B726DB7F6EC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,9 +108,16 @@ Global
 		{60F989AF-9F43-47A2-863B-E0F2026DF0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60F989AF-9F43-47A2-863B-E0F2026DF0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60F989AF-9F43-47A2-863B-E0F2026DF0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C29A2850-E141-493A-8F30-B726DB7F6EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29A2850-E141-493A-8F30-B726DB7F6EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29A2850-E141-493A-8F30-B726DB7F6EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29A2850-E141-493A-8F30-B726DB7F6EC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C29A2850-E141-493A-8F30-B726DB7F6EC3} = {DEFFC79F-7B03-440E-821B-03BD1F329AB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD726FEC-24F7-47B5-A4DB-1B261A4DF6F7}
