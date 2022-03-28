@@ -1,13 +1,15 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using FireSharp;
-using FireSharp.Config;
-using FireSharp.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace FireBaseNotification
+namespace GraphQlNorthwind
 {
     public class Startup
     {
@@ -19,19 +21,9 @@ namespace FireBaseNotification
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-
-        //FirebaseConfig _fireBaseConfigData = new FirebaseConfig()
-        //{
-        //    AuthSecret = "AIzaSyCYY93TAc47XlS5tZnxdeHtzWND591tZNE",//Web API Key
-        //    BasePath = "https://notificationsample-fac93/overview"
-        //};
-
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddScoped<IFirebaseClient, FirebaseClient>();
-            services.AddScoped<IFirebaseConfig, FirebaseConfig>();
-            services.AddSwaggerGen();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,14 +33,15 @@ namespace FireBaseNotification
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
 
             app.UseHttpsRedirection();
-
-            app.UseSwagger();
-
-            app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V2");
-            });
+            app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -56,7 +49,7 @@ namespace FireBaseNotification
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapRazorPages();
             });
         }
     }

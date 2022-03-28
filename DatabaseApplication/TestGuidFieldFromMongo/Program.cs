@@ -1,17 +1,9 @@
 ﻿#nullable enable
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using Mongo.DAL.Models;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
 
 namespace TestGuidFieldFromMongo
 {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Mongo.DAL.Models;
-using MongoDB.Bson;
+﻿using Mongo.DAL.Models;
 using MongoDB.Driver;
 
 namespace MonGoCreate

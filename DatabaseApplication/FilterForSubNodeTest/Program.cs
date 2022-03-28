@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using Mongo.DAL.Models;
+﻿using Mongo.DAL.Models;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 
 namespace FilterForSubNodeTest

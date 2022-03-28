@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using Mongo.DAL.Models;
-using Mongo.DAL.UnwindModel;
+﻿using Mongo.DAL.Models;
 using MongoDB.Driver;
 //https://www.niceonecode.com/blog/72/mongodb-aggregation-array-to-object-id-with-three-collections-many-to-one-to-one-using-lookup
 namespace LoookupAggregate

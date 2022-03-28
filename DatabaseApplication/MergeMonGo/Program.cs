@@ -1,10 +1,6 @@
 ﻿using Mongo.DAL.Models;
 using MongoDB.Driver;
-using System;
-using System.Linq;
-using System.Text.Json;
-using Mongo.DAL.UnwindModel;
-using MongoDB.Bson;
+
 //Попробуй с конкретных примеров в документации...:
 //db.salaries.insertMany([
 //{ "_id" : 1, employee: "Ant", dept: "A", salary: 100000, fiscal_year: 2017 },

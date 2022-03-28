@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using FireSharp;
-using FireSharp.Config;
-using FireSharp.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using PureCodeFirst.Data.Contexts;
+using PureCodeFirst.Resolvers;
 
-namespace FireBaseNotification
+namespace PureCodeFirst
 {
     public class Startup
     {
@@ -19,19 +20,21 @@ namespace FireBaseNotification
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-
-        //FirebaseConfig _fireBaseConfigData = new FirebaseConfig()
-        //{
-        //    AuthSecret = "AIzaSyCYY93TAc47XlS5tZnxdeHtzWND591tZNE",//Web API Key
-        //    BasePath = "https://notificationsample-fac93/overview"
-        //};
-
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IFirebaseClient, FirebaseClient>();
-            services.AddScoped<IFirebaseConfig, FirebaseConfig>();
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c =>
+                c.SwaggerDoc("v1", new OpenApiInfo() {Title = "PureCodeFirst", Version = "v1"}));
+            services.AddGraphQLServer();
+
+            services.AddDbContext<MyWorldDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("MyWorldDbConnection"));
+            });
+
+            services.AddGraphQLServer().AddQueryType<QueryResolver>();
+
+            services.AddGraphQLServer().AddMutationType<MutationResolver>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,14 +44,20 @@ namespace FireBaseNotification
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
 
-            app.UseHttpsRedirection();
+                app.UseHsts();
+            }
 
             app.UseSwagger();
 
-            app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V2");
-            });
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PureCodeFirst"));
+
+            app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -56,6 +65,8 @@ namespace FireBaseNotification
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGraphQL();
+
                 endpoints.MapControllers();
             });
         }

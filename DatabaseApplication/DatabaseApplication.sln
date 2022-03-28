@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31205.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{DC3F48BA-7EEB-4290-86F7-5533D3F55AAC}"
 EndProject
@@ -40,7 +40,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGuidFieldFromMongo", "T
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FirebaseProjects", "FirebaseProjects", "{DEFFC79F-7B03-440E-821B-03BD1F329AB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireBaseNotification", "FireBaseNotification\FireBaseNotification.csproj", "{C29A2850-E141-493A-8F30-B726DB7F6EC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FireBaseNotification", "FireBaseNotification\FireBaseNotification.csproj", "{C29A2850-E141-493A-8F30-B726DB7F6EC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GrappQlApiSamples", "GrappQlApiSamples", "{2D5B1CB5-6C5F-4579-82DD-522DF8BBD839}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PureCodeFirst", "PureCodeFirst\PureCodeFirst.csproj", "{E98D5BFE-124D-4FB6-A791-F7E4CC0B9B51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQlСhocolateDataPackage", "GraphQlСhocolateDataPackage\GraphQlСhocolateDataPackage.csproj", "{0FC3D0C7-6F42-40CC-A53E-887CD95FA92D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQlNorthwind", "GraphQlNorthwind\GraphQlNorthwind.csproj", "{C36ACB44-D0EA-4969-87F0-B90AD0DA82CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -112,12 +120,27 @@ Global
 		{C29A2850-E141-493A-8F30-B726DB7F6EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C29A2850-E141-493A-8F30-B726DB7F6EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C29A2850-E141-493A-8F30-B726DB7F6EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98D5BFE-124D-4FB6-A791-F7E4CC0B9B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98D5BFE-124D-4FB6-A791-F7E4CC0B9B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98D5BFE-124D-4FB6-A791-F7E4CC0B9B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98D5BFE-124D-4FB6-A791-F7E4CC0B9B51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FC3D0C7-6F42-40CC-A53E-887CD95FA92D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC3D0C7-6F42-40CC-A53E-887CD95FA92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC3D0C7-6F42-40CC-A53E-887CD95FA92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC3D0C7-6F42-40CC-A53E-887CD95FA92D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36ACB44-D0EA-4969-87F0-B90AD0DA82CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36ACB44-D0EA-4969-87F0-B90AD0DA82CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36ACB44-D0EA-4969-87F0-B90AD0DA82CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36ACB44-D0EA-4969-87F0-B90AD0DA82CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C29A2850-E141-493A-8F30-B726DB7F6EC3} = {DEFFC79F-7B03-440E-821B-03BD1F329AB6}
+		{E98D5BFE-124D-4FB6-A791-F7E4CC0B9B51} = {2D5B1CB5-6C5F-4579-82DD-522DF8BBD839}
+		{0FC3D0C7-6F42-40CC-A53E-887CD95FA92D} = {2D5B1CB5-6C5F-4579-82DD-522DF8BBD839}
+		{C36ACB44-D0EA-4969-87F0-B90AD0DA82CE} = {2D5B1CB5-6C5F-4579-82DD-522DF8BBD839}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD726FEC-24F7-47B5-A4DB-1B261A4DF6F7}
