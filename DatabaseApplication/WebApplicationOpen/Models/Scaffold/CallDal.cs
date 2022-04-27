@@ -1,9 +1,10 @@
 ﻿using System;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace WebApplicationOpen.Models.Scaffold
 {
+	[Table("Call")]
 	public class CallDal
 	{
 		public long Id { get; set; }
@@ -18,6 +19,6 @@ namespace WebApplicationOpen.Models.Scaffold
 		public virtual BackEndUserDal BackEndUser { get; set; }
 		public virtual CallStatusDal CallStatus { get; set; }
 		public virtual ClientDal Client { get; set; }
-		public virtual ServiceHistory ServiceHistory { get; set; }
+		public virtual ServiceHistoryDal ServiceHistory { get; set; }
 	}
 }

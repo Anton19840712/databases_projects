@@ -1,7 +1,8 @@
-﻿
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
+	[Table("ClientInfoForSslOrder")]
 	public class ClientInfoForSslOrderDal
 	{
 		public long Id { get; set; }
@@ -19,8 +20,8 @@ namespace WebApplicationOpen.Models.Scaffold
 		public string Address { get; set; }
 
 		public virtual ClientDal Client { get; set; }
-		public virtual ClientType ClientType { get; set; }
-		public virtual Country Country { get; set; }
-		public virtual Service Service { get; set; }
+		public virtual ClientTypeDal ClientType { get; set; }
+		public virtual CountryDal Country { get; set; }
+		public virtual ServiceDal Service { get; set; }
 	}
 }

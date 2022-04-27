@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-
-
+using System.ComponentModel.DataAnnotations.Schema;
+using WebApplicationOpen.Models.Scaffold;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
-	public class ClientDal
+	[Table("Client")]
+	public sealed class ClientDal
 	{
 		public ClientDal()
 		{
@@ -12,20 +13,20 @@ namespace WebApplicationOpen.Models.Scaffold
 			Acts = new HashSet<ActDal>();
 			ApiRequestMessages = new HashSet<ApiRequestMessageDal>();
 			Calls = new HashSet<CallDal>();
-			ClientBalances = new HashSet<ClientBalance>();
+			ClientBalances = new HashSet<ClientBalanceDal>();
 			ClientInfoForSslOrders = new HashSet<ClientInfoForSslOrderDal>();
-			ClientRequisitesHistories = new HashSet<ClientRequisitesHistory>();
-			DebitBalances = new HashSet<DebitBalance>();
-			Invoices = new HashSet<Invoice>();
-			NotificationServiceCurrentMessages = new HashSet<NotificationServiceCurrentMessage>();
-			PersonalDiscounts = new HashSet<PersonalDiscount>();
-			ServiceHistories = new HashSet<ServiceHistory>();
-			ServiceRegistrations = new HashSet<ServiceRegistration>();
-			Services = new HashSet<Service>();
-			Statistics = new HashSet<Statistic>();
-			TransferOutgoingRequests = new HashSet<TransferOutgoingRequest>();
-			UnsentSmsMessages = new HashSet<UnsentSmsMessage>();
-			VerificationResults = new HashSet<VerificationResult>();
+			ClientRequisitesHistories = new HashSet<ClientRequisitesHistoryDal>();
+			DebitBalances = new HashSet<DebitBalanceDal>();
+			Invoices = new HashSet<InvoiceDal>();
+			NotificationServiceCurrentMessages = new HashSet<NotificationServiceCurrentMessageDal>();
+			PersonalDiscounts = new HashSet<PersonalDiscountDal>();
+			ServiceHistories = new HashSet<ServiceHistoryDal>();
+			ServiceRegistrations = new HashSet<ServiceRegistrationDal>();
+			Services = new HashSet<ServiceDal>();
+			Statistics = new HashSet<StatisticDal>();
+			TransferOutgoingRequests = new HashSet<TransferOutgoingRequestDal>();
+			UnsentSmsMessages = new HashSet<UnsentSmsMessageDal>();
+			VerificationResults = new HashSet<VerificationResultDal>();
 		}
 
 		public long ClientId { get; set; }
@@ -54,36 +55,36 @@ namespace WebApplicationOpen.Models.Scaffold
 		public bool IsBlockedClientRequisites { get; set; }
 		public bool IsBlockedPayments { get; set; }
 
-		public virtual BankRequisiteDal BankRequisite { get; set; }
-		public virtual ClientRegistrationStatusDal ClientRegistrationStatus { get; set; }
-		public virtual ClientType ClientType { get; set; }
-		public virtual ContactRequisite ContactRequisite { get; set; }
-		public virtual Country Country { get; set; }
-		public virtual Currency DefaultUserCurrencyNavigation { get; set; }
-		public virtual EgrRequisite EgrRequisites { get; set; }
-		public virtual JuridicalRequisite JuridicalRequisites { get; set; }
-		public virtual PassportRequisite PassportRequisites { get; set; }
-		public virtual PasswordRecoveryType PasswordRecoveryType { get; set; }
-		public virtual AddressDal PrimaryAddress { get; set; }
-		public virtual User User { get; set; }
-		public virtual WhoIsInfo WhoIsInfo { get; set; }
-		public virtual ICollection<ActAccessKeyDal> ActAccessKeys { get; set; }
-		public virtual ICollection<ActDal> Acts { get; set; }
-		public virtual ICollection<ApiRequestMessageDal> ApiRequestMessages { get; set; }
-		public virtual ICollection<CallDal> Calls { get; set; }
-		public virtual ICollection<ClientBalance> ClientBalances { get; set; }
-		public virtual ICollection<ClientInfoForSslOrderDal> ClientInfoForSslOrders { get; set; }
-		public virtual ICollection<ClientRequisitesHistory> ClientRequisitesHistories { get; set; }
-		public virtual ICollection<DebitBalance> DebitBalances { get; set; }
-		public virtual ICollection<Invoice> Invoices { get; set; }
-		public virtual ICollection<NotificationServiceCurrentMessage> NotificationServiceCurrentMessages { get; set; }
-		public virtual ICollection<PersonalDiscount> PersonalDiscounts { get; set; }
-		public virtual ICollection<ServiceHistory> ServiceHistories { get; set; }
-		public virtual ICollection<ServiceRegistration> ServiceRegistrations { get; set; }
-		public virtual ICollection<Service> Services { get; set; }
-		public virtual ICollection<Statistic> Statistics { get; set; }
-		public virtual ICollection<TransferOutgoingRequest> TransferOutgoingRequests { get; set; }
-		public virtual ICollection<UnsentSmsMessage> UnsentSmsMessages { get; set; }
-		public virtual ICollection<VerificationResult> VerificationResults { get; set; }
+		public BankRequisiteDal BankRequisite { get; set; }
+		public ClientRegistrationStatusDal ClientRegistrationStatus { get; set; }
+		public ClientTypeDal ClientType { get; set; }
+		public ContactRequisiteDal ContactRequisite { get; set; }
+		public CountryDal Country { get; set; }
+		public CurrencyDal DefaultUserCurrencyNavigation { get; set; }
+		public EgrRequisiteDal EgrRequisites { get; set; }
+		public JuridicalRequisiteDal JuridicalRequisites { get; set; }
+		public PassportRequisiteDal PassportRequisites { get; set; }
+		public PasswordRecoveryTypeDal PasswordRecoveryType { get; set; }
+		public AddressDal PrimaryAddress { get; set; }
+		public UserDal User { get; set; }
+		public WhoIsInfoDal WhoIsInfo { get; set; }
+		public ICollection<ActAccessKeyDal> ActAccessKeys { get; set; }
+		public ICollection<ActDal> Acts { get; set; }
+		public ICollection<ApiRequestMessageDal> ApiRequestMessages { get; set; }
+		public ICollection<CallDal> Calls { get; set; }
+		public ICollection<ClientBalanceDal> ClientBalances { get; set; }
+		public ICollection<ClientInfoForSslOrderDal> ClientInfoForSslOrders { get; set; }
+		public ICollection<ClientRequisitesHistoryDal> ClientRequisitesHistories { get; set; }
+		public ICollection<DebitBalanceDal> DebitBalances { get; set; }
+		public ICollection<InvoiceDal> Invoices { get; set; }
+		public ICollection<NotificationServiceCurrentMessageDal> NotificationServiceCurrentMessages { get; set; }
+		public ICollection<PersonalDiscountDal> PersonalDiscounts { get; set; }
+		public ICollection<ServiceHistoryDal> ServiceHistories { get; set; }
+		public ICollection<ServiceRegistrationDal> ServiceRegistrations { get; set; }
+		public ICollection<ServiceDal> Services { get; set; }
+		public ICollection<StatisticDal> Statistics { get; set; }
+		public ICollection<TransferOutgoingRequestDal> TransferOutgoingRequests { get; set; }
+		public ICollection<UnsentSmsMessageDal> UnsentSmsMessages { get; set; }
+		public ICollection<VerificationResultDal> VerificationResults { get; set; }
 	}
 }

@@ -28,124 +28,124 @@ namespace WebApplicationOpen.Models.Scaffold
 		public virtual DbSet<CallPendingTaskDal> CallPendingTasks { get; set; }
 		public virtual DbSet<CallStatusDal> CallStatuses { get; set; }
 		public virtual DbSet<ClientDal> Clients { get; set; }
-		public virtual DbSet<ClientBalance> ClientBalances { get; set; }
+		public virtual DbSet<ClientBalanceDal> ClientBalances { get; set; }
 		public virtual DbSet<ClientBalanceTypeDal> ClientBalanceTypes { get; set; }
 		public virtual DbSet<ClientInfoForSslOrderDal> ClientInfoForSslOrders { get; set; }
 		public virtual DbSet<ClientRegistrationStatusDal> ClientRegistrationStatuses { get; set; }
-		public virtual DbSet<ClientRequisitesHistory> ClientRequisitesHistories { get; set; }
-		public virtual DbSet<ClientType> ClientTypes { get; set; }
-		public virtual DbSet<ContactRequisite> ContactRequisites { get; set; }
-		public virtual DbSet<Cost> Costs { get; set; }
-		public virtual DbSet<Country> Countries { get; set; }
-		public virtual DbSet<Currency> Currencies { get; set; }
-		public virtual DbSet<DebitBalance> DebitBalances { get; set; }
-		public virtual DbSet<DelayChangeTariffPlan> DelayChangeTariffPlans { get; set; }
-		public virtual DbSet<DelayLock> DelayLocks { get; set; }
-		public virtual DbSet<DelayLockType> DelayLockTypes { get; set; }
-		public virtual DbSet<DnsMailProvider> DnsMailProviders { get; set; }
-		public virtual DbSet<DnsMailRecord> DnsMailRecords { get; set; }
-		public virtual DbSet<DnsServer> DnsServers { get; set; }
-		public virtual DbSet<Domain> Domains { get; set; }
-		public virtual DbSet<DomainDescendant> DomainDescendants { get; set; }
-		public virtual DbSet<DomainDescendantContract> DomainDescendantContracts { get; set; }
-		public virtual DbSet<DomainHistory> DomainHistories { get; set; }
-		public virtual DbSet<DomainLog> DomainLogs { get; set; }
-		public virtual DbSet<DomainXrrpQueue> DomainXrrpQueues { get; set; }
-		public virtual DbSet<DomainZone> DomainZones { get; set; }
-		public virtual DbSet<DsRecord> DsRecords { get; set; }
-		public virtual DbSet<EgrRequisite> EgrRequisites { get; set; }
-		public virtual DbSet<EmailFrom> EmailFroms { get; set; }
-		public virtual DbSet<HostingServer> HostingServers { get; set; }
-		public virtual DbSet<HostingServerType> HostingServerTypes { get; set; }
-		public virtual DbSet<HostingServersIp> HostingServersIps { get; set; }
-		public virtual DbSet<Invoice> Invoices { get; set; }
-		public virtual DbSet<InvoiceEmoneyPayment> InvoiceEmoneyPayments { get; set; }
-		public virtual DbSet<InvoicePayment> InvoicePayments { get; set; }
-		public virtual DbSet<InvoicePaymentRequisite> InvoicePaymentRequisites { get; set; }
-		public virtual DbSet<JuridicalRequisite> JuridicalRequisites { get; set; }
-		public virtual DbSet<Language> Languages { get; set; }
-		public virtual DbSet<LocalRegistryMessage> LocalRegistryMessages { get; set; }
-		public virtual DbSet<LogEvent> LogEvents { get; set; }
-		public virtual DbSet<LogEventType> LogEventTypes { get; set; }
-		public virtual DbSet<LogNote> LogNotes { get; set; }
+		public virtual DbSet<ClientRequisitesHistoryDal> ClientRequisitesHistories { get; set; }
+		public virtual DbSet<ClientTypeDal> ClientTypes { get; set; }
+		public virtual DbSet<ContactRequisiteDal> ContactRequisites { get; set; }
+		public virtual DbSet<CostDal> Costs { get; set; }
+		public virtual DbSet<CountryDal> Countries { get; set; }
+		public virtual DbSet<CurrencyDal> Currencies { get; set; }
+		public virtual DbSet<DebitBalanceDal> DebitBalances { get; set; }
+		public virtual DbSet<DelayChangeTariffPlanDal> DelayChangeTariffPlans { get; set; }
+		public virtual DbSet<DelayLockDal> DelayLocks { get; set; }
+		public virtual DbSet<DelayLockTypeDal> DelayLockTypes { get; set; }
+		public virtual DbSet<DnsMailProviderDal> DnsMailProviders { get; set; }
+		public virtual DbSet<DnsMailRecordDal> DnsMailRecords { get; set; }
+		public virtual DbSet<DnsServerDal> DnsServers { get; set; }
+		public virtual DbSet<DomainDal> Domains { get; set; }
+		public virtual DbSet<DomainDescendantDal> DomainDescendants { get; set; }
+		public virtual DbSet<DomainDescendantContractDal> DomainDescendantContracts { get; set; }
+		public virtual DbSet<DomainHistoryDal> DomainHistories { get; set; }
+		public virtual DbSet<DomainLogDal> DomainLogs { get; set; }
+		public virtual DbSet<DomainXrrpQueueDal> DomainXrrpQueues { get; set; }
+		public virtual DbSet<DomainZoneDal> DomainZones { get; set; }
+		public virtual DbSet<DsRecordDal> DsRecords { get; set; }
+		public virtual DbSet<EgrRequisiteDal> EgrRequisites { get; set; }
+		public virtual DbSet<EmailFromDal> EmailFroms { get; set; }
+		public virtual DbSet<HostingServerDal> HostingServers { get; set; }
+		public virtual DbSet<HostingServerTypeDal> HostingServerTypes { get; set; }
+		public virtual DbSet<HostingServersIpDal> HostingServersIps { get; set; }
+		public virtual DbSet<InvoiceDal> Invoices { get; set; }
+		public virtual DbSet<InvoiceEmoneyPaymentDal> InvoiceEmoneyPayments { get; set; }
+		public virtual DbSet<InvoicePaymentDal> InvoicePayments { get; set; }
+		public virtual DbSet<InvoicePaymentRequisiteDal> InvoicePaymentRequisites { get; set; }
+		public virtual DbSet<JuridicalRequisiteDal> JuridicalRequisites { get; set; }
+		public virtual DbSet<LanguageDal> Languages { get; set; }
+		public virtual DbSet<LocalRegistryMessageDal> LocalRegistryMessages { get; set; }
+		public virtual DbSet<LogEventDal> LogEvents { get; set; }
+		public virtual DbSet<LogEventTypeDal> LogEventTypes { get; set; }
+		public virtual DbSet<LogNoteDal> LogNotes { get; set; }
 		public virtual DbSet<LogRepository> LogRepositories { get; set; }
-		public virtual DbSet<LogType> LogTypes { get; set; }
-		public virtual DbSet<NotificationEvent> NotificationEvents { get; set; }
-		public virtual DbSet<NotificationSchedule> NotificationSchedules { get; set; }
-		public virtual DbSet<NotificationServiceCurrentMessage> NotificationServiceCurrentMessages { get; set; }
-		public virtual DbSet<OrderAction> OrderActions { get; set; }
-		public virtual DbSet<PassportRequisite> PassportRequisites { get; set; }
-		public virtual DbSet<PasswordRecovery> PasswordRecoveries { get; set; }
-		public virtual DbSet<PasswordRecoveryType> PasswordRecoveryTypes { get; set; }
-		public virtual DbSet<PaymentStatus> PaymentStatuses { get; set; }
-		public virtual DbSet<PaymentType> PaymentTypes { get; set; }
-		public virtual DbSet<PendingOperation> PendingOperations { get; set; }
-		public virtual DbSet<Period> Periods { get; set; }
-		public virtual DbSet<PeriodUnit> PeriodUnits { get; set; }
-		public virtual DbSet<PersonalDiscount> PersonalDiscounts { get; set; }
-		public virtual DbSet<PowerDnsregistryQueue> PowerDnsregistryQueues { get; set; }
-		public virtual DbSet<PromoCode> PromoCodes { get; set; }
-		public virtual DbSet<PromoCodeDiscountValue> PromoCodeDiscountValues { get; set; }
-		public virtual DbSet<PromoCodeService> PromoCodeServices { get; set; }
-		public virtual DbSet<PromoCodeTypeService> PromoCodeTypeServices { get; set; }
-		public virtual DbSet<Redirect> Redirects { get; set; }
-		public virtual DbSet<RedirectAction> RedirectActions { get; set; }
-		public virtual DbSet<Registrant> Registrants { get; set; }
-		public virtual DbSet<RegistrationOwnership> RegistrationOwnerships { get; set; }
-		public virtual DbSet<Role> Roles { get; set; }
-		public virtual DbSet<Service> Services { get; set; }
-		public virtual DbSet<ServiceClass> ServiceClasses { get; set; }
-		public virtual DbSet<ServiceHistory> ServiceHistories { get; set; }
-		public virtual DbSet<ServiceInfo> ServiceInfos { get; set; }
-		public virtual DbSet<ServiceNotificationQueue> ServiceNotificationQueues { get; set; }
-		public virtual DbSet<ServiceRegistration> ServiceRegistrations { get; set; }
-		public virtual DbSet<ServiceRegistrationStatus> ServiceRegistrationStatuses { get; set; }
-		public virtual DbSet<ServiceStatistic> ServiceStatistics { get; set; }
-		public virtual DbSet<ServiceStatus> ServiceStatuses { get; set; }
-		public virtual DbSet<ServiceType> ServiceTypes { get; set; }
-		public virtual DbSet<ServicesInHistory> ServicesInHistories { get; set; }
-		public virtual DbSet<SslApiQueue> SslApiQueues { get; set; }
-		public virtual DbSet<SslCertificateType> SslCertificateTypes { get; set; }
-		public virtual DbSet<SslOrderStatus> SslOrderStatuses { get; set; }
-		public virtual DbSet<SslService> SslServices { get; set; }
-		public virtual DbSet<SslTariffSetting> SslTariffSettings { get; set; }
-		public virtual DbSet<SslVerification> SslVerifications { get; set; }
-		public virtual DbSet<SslVerificationType> SslVerificationTypes { get; set; }
-		public virtual DbSet<Statistic> Statistics { get; set; }
-		public virtual DbSet<SystemNotification> SystemNotifications { get; set; }
-		public virtual DbSet<SystemNotificationErrorLevel> SystemNotificationErrorLevels { get; set; }
-		public virtual DbSet<SystemNotificationType> SystemNotificationTypes { get; set; }
-		public virtual DbSet<TariffPlan> TariffPlans { get; set; }
-		public virtual DbSet<TariffPlanCost> TariffPlanCosts { get; set; }
-		public virtual DbSet<TariffPlanDuration> TariffPlanDurations { get; set; }
-		public virtual DbSet<TariffPlanInfo> TariffPlanInfos { get; set; }
-		public virtual DbSet<TariffPlanTarificationType> TariffPlanTarificationTypes { get; set; }
-		public virtual DbSet<TarifficationAmountWork> TarifficationAmountWorks { get; set; }
-		public virtual DbSet<TransferIncomingRequest> TransferIncomingRequests { get; set; }
-		public virtual DbSet<TransferOperation> TransferOperations { get; set; }
-		public virtual DbSet<TransferOutgoingRequest> TransferOutgoingRequests { get; set; }
-		public virtual DbSet<UnsentMail> UnsentMails { get; set; }
-		public virtual DbSet<UnsentSmsMessage> UnsentSmsMessages { get; set; }
-		public virtual DbSet<User> Users { get; set; }
-		public virtual DbSet<UserInRole> UserInRoles { get; set; }
-		public virtual DbSet<UserLog> UserLogs { get; set; }
-		public virtual DbSet<UserSession> UserSessions { get; set; }
-		public virtual DbSet<Variable> Variables { get; set; }
-		public virtual DbSet<Vat> Vats { get; set; }
-		public virtual DbSet<VerificationField> VerificationFields { get; set; }
-		public virtual DbSet<VerificationLog> VerificationLogs { get; set; }
-		public virtual DbSet<VerificationResult> VerificationResults { get; set; }
-		public virtual DbSet<VerificationStatus> VerificationStatuses { get; set; }
-		public virtual DbSet<VirtualHosting> VirtualHostings { get; set; }
-		public virtual DbSet<Vp> Vps { get; set; }
-		public virtual DbSet<VpsConfig> VpsConfigs { get; set; }
-		public virtual DbSet<VpsConfigItemsCost> VpsConfigItemsCosts { get; set; }
-		public virtual DbSet<VpsDrife> VpsDrives { get; set; }
-		public virtual DbSet<VpsDriveType> VpsDriveTypes { get; set; }
-		public virtual DbSet<VpsOsType> VpsOsTypes { get; set; }
-		public virtual DbSet<VpsTariffPlan> VpsTariffPlans { get; set; }
-		public virtual DbSet<VpsTariffPlanConfigLimit> VpsTariffPlanConfigLimits { get; set; }
-		public virtual DbSet<WhoIsInfo> WhoIsInfos { get; set; }
+		public virtual DbSet<LogTypeDal> LogTypes { get; set; }
+		public virtual DbSet<NotificationEventDal> NotificationEvents { get; set; }
+		public virtual DbSet<NotificationScheduleDal> NotificationSchedules { get; set; }
+		public virtual DbSet<NotificationServiceCurrentMessageDal> NotificationServiceCurrentMessages { get; set; }
+		public virtual DbSet<OrderActionDal> OrderActions { get; set; }
+		public virtual DbSet<PassportRequisiteDal> PassportRequisites { get; set; }
+		public virtual DbSet<PasswordRecoveryDal> PasswordRecoveries { get; set; }
+		public virtual DbSet<PasswordRecoveryTypeDal> PasswordRecoveryTypes { get; set; }
+		public virtual DbSet<PaymentStatusDal> PaymentStatuses { get; set; }
+		public virtual DbSet<PaymentTypeDal> PaymentTypes { get; set; }
+		public virtual DbSet<PendingOperationDal> PendingOperations { get; set; }
+		public virtual DbSet<PeriodDal> Periods { get; set; }
+		public virtual DbSet<PeriodUnitDal> PeriodUnits { get; set; }
+		public virtual DbSet<PersonalDiscountDal> PersonalDiscounts { get; set; }
+		public virtual DbSet<PowerDnsregistryQueueDal> PowerDnsregistryQueues { get; set; }
+		public virtual DbSet<PromoCodeDal> PromoCodes { get; set; }
+		public virtual DbSet<PromoCodeDiscountValueDal> PromoCodeDiscountValues { get; set; }
+		public virtual DbSet<PromoCodeServiceDal> PromoCodeServices { get; set; }
+		public virtual DbSet<PromoCodeTypeServiceDal> PromoCodeTypeServices { get; set; }
+		public virtual DbSet<RedirectDal> Redirects { get; set; }
+		public virtual DbSet<RedirectActionDal> RedirectActions { get; set; }
+		public virtual DbSet<RegistrantDal> Registrants { get; set; }
+		public virtual DbSet<RegistrationOwnershipDal> RegistrationOwnerships { get; set; }
+		public virtual DbSet<RoleDal> Roles { get; set; }
+		public virtual DbSet<ServiceDal> Services { get; set; }
+		public virtual DbSet<ServiceClassDal> ServiceClasses { get; set; }
+		public virtual DbSet<ServiceHistoryDal> ServiceHistories { get; set; }
+		public virtual DbSet<ServiceInfoDal> ServiceInfos { get; set; }
+		public virtual DbSet<ServiceNotificationQueueDal> ServiceNotificationQueues { get; set; }
+		public virtual DbSet<ServiceRegistrationDal> ServiceRegistrations { get; set; }
+		public virtual DbSet<ServiceRegistrationStatusDal> ServiceRegistrationStatuses { get; set; }
+		public virtual DbSet<ServiceStatisticDal> ServiceStatistics { get; set; }
+		public virtual DbSet<ServiceStatusDal> ServiceStatuses { get; set; }
+		public virtual DbSet<ServiceTypeDal> ServiceTypes { get; set; }
+		public virtual DbSet<ServicesInHistoryDal> ServicesInHistories { get; set; }
+		public virtual DbSet<SslApiQueueDal> SslApiQueues { get; set; }
+		public virtual DbSet<SslCertificateTypeDal> SslCertificateTypes { get; set; }
+		public virtual DbSet<SslOrderStatusDal> SslOrderStatuses { get; set; }
+		public virtual DbSet<SslServiceDal> SslServices { get; set; }
+		public virtual DbSet<SslTariffSettingDal> SslTariffSettings { get; set; }
+		public virtual DbSet<SslVerificationDal> SslVerifications { get; set; }
+		public virtual DbSet<SslVerificationTypeDal> SslVerificationTypes { get; set; }
+		public virtual DbSet<StatisticDal> Statistics { get; set; }
+		public virtual DbSet<SystemNotificationDal> SystemNotifications { get; set; }
+		public virtual DbSet<SystemNotificationErrorLevelDal> SystemNotificationErrorLevels { get; set; }
+		public virtual DbSet<SystemNotificationTypeDal> SystemNotificationTypes { get; set; }
+		public virtual DbSet<TariffPlanDal> TariffPlans { get; set; }
+		public virtual DbSet<TariffPlanCostDal> TariffPlanCosts { get; set; }
+		public virtual DbSet<TariffPlanDurationDal> TariffPlanDurations { get; set; }
+		public virtual DbSet<TariffPlanInfoDal> TariffPlanInfos { get; set; }
+		public virtual DbSet<TariffPlanTarificationTypeDal> TariffPlanTarificationTypes { get; set; }
+		public virtual DbSet<TarifficationAmountWorkDal> TarifficationAmountWorks { get; set; }
+		public virtual DbSet<TransferIncomingRequestDal> TransferIncomingRequests { get; set; }
+		public virtual DbSet<TransferOperationDal> TransferOperations { get; set; }
+		public virtual DbSet<TransferOutgoingRequestDal> TransferOutgoingRequests { get; set; }
+		public virtual DbSet<UnsentMailDal> UnsentMails { get; set; }
+		public virtual DbSet<UnsentSmsMessageDal> UnsentSmsMessages { get; set; }
+		public virtual DbSet<UserDal> Users { get; set; }
+		public virtual DbSet<UserInRoleDal> UserInRoles { get; set; }
+		public virtual DbSet<UserLogDal> UserLogs { get; set; }
+		public virtual DbSet<UserSessionDal> UserSessions { get; set; }
+		public virtual DbSet<VariableDal> Variables { get; set; }
+		public virtual DbSet<VatDal> Vats { get; set; }
+		public virtual DbSet<VerificationFieldDal> VerificationFields { get; set; }
+		public virtual DbSet<VerificationLogDal> VerificationLogs { get; set; }
+		public virtual DbSet<VerificationResultDal> VerificationResults { get; set; }
+		public virtual DbSet<VerificationStatusDal> VerificationStatuses { get; set; }
+		public virtual DbSet<VirtualHostingDal> VirtualHostings { get; set; }
+		public virtual DbSet<VpDal> Vps { get; set; }
+		public virtual DbSet<VpsConfigDal> VpsConfigs { get; set; }
+		public virtual DbSet<VpsConfigItemsCostDal> VpsConfigItemsCosts { get; set; }
+		public virtual DbSet<VpsDrifeDal> VpsDrives { get; set; }
+		public virtual DbSet<VpsDriveTypeDal> VpsDriveTypes { get; set; }
+		public virtual DbSet<VpsOsTypeDal> VpsOsTypes { get; set; }
+		public virtual DbSet<VpsTariffPlanDal> VpsTariffPlans { get; set; }
+		public virtual DbSet<VpsTariffPlanConfigLimitDal> VpsTariffPlanConfigLimits { get; set; }
+		public virtual DbSet<WhoIsInfoDal> WhoIsInfos { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
@@ -491,7 +491,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_ClientRequisites_WhoisInfo");
 			});
 
-			modelBuilder.Entity<ClientBalance>(entity =>
+			modelBuilder.Entity<ClientBalanceDal>(entity =>
 			{
 				entity.HasKey(e => e.ClientBalanceId)
 					.IsClustered(false);
@@ -593,7 +593,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(64);
 			});
 
-			modelBuilder.Entity<ClientRequisitesHistory>(entity =>
+			modelBuilder.Entity<ClientRequisitesHistoryDal>(entity =>
 			{
 				entity.ToTable("ClientRequisitesHistory");
 
@@ -691,7 +691,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_ClientRequisitesHistory_Countries2");
 			});
 
-			modelBuilder.Entity<ClientType>(entity =>
+			modelBuilder.Entity<ClientTypeDal>(entity =>
 			{
 				entity.Property(e => e.ClientTypeId).ValueGeneratedNever();
 
@@ -700,7 +700,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(64);
 			});
 
-			modelBuilder.Entity<ContactRequisite>(entity =>
+			modelBuilder.Entity<ContactRequisiteDal>(entity =>
 			{
 				entity.Property(e => e.AdditionalEmail1).HasMaxLength(64);
 
@@ -723,7 +723,7 @@ namespace WebApplicationOpen.Models.Scaffold
 				entity.Property(e => e.Phone).HasMaxLength(64);
 			});
 
-			modelBuilder.Entity<Cost>(entity =>
+			modelBuilder.Entity<CostDal>(entity =>
 			{
 				entity.Property(e => e.Value).HasColumnType("decimal(30, 4)");
 
@@ -734,14 +734,14 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_Cost_Currency");
 			});
 
-			modelBuilder.Entity<Country>(entity =>
+			modelBuilder.Entity<CountryDal>(entity =>
 			{
 				entity.Property(e => e.CountryName)
 					.IsRequired()
 					.HasMaxLength(128);
 			});
 
-			modelBuilder.Entity<Currency>(entity =>
+			modelBuilder.Entity<CurrencyDal>(entity =>
 			{
 				entity.Property(e => e.CurrencyId).ValueGeneratedNever();
 
@@ -750,7 +750,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(4);
 			});
 
-			modelBuilder.Entity<DebitBalance>(entity =>
+			modelBuilder.Entity<DebitBalanceDal>(entity =>
 			{
 				entity.Property(e => e.Created).HasColumnType("datetime");
 
@@ -769,7 +769,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_DebitBalances_Clients");
 			});
 
-			modelBuilder.Entity<DelayChangeTariffPlan>(entity =>
+			modelBuilder.Entity<DelayChangeTariffPlanDal>(entity =>
 			{
 				entity.ToTable("DelayChangeTariffPlan");
 
@@ -778,7 +778,7 @@ namespace WebApplicationOpen.Models.Scaffold
 				entity.Property(e => e.SumNeedForChange).HasColumnType("decimal(10, 2)");
 			});
 
-			modelBuilder.Entity<DelayLock>(entity =>
+			modelBuilder.Entity<DelayLockDal>(entity =>
 			{
 				entity.Property(e => e.ActionDate).HasColumnType("datetime");
 
@@ -802,19 +802,19 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_DelayLocks_Services");
 			});
 
-			modelBuilder.Entity<DelayLockType>(entity =>
+			modelBuilder.Entity<DelayLockTypeDal>(entity =>
 			{
 				entity.Property(e => e.Description).HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<DnsMailProvider>(entity =>
+			modelBuilder.Entity<DnsMailProviderDal>(entity =>
 			{
 				entity.Property(e => e.ProviderName)
 					.IsRequired()
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<DnsMailRecord>(entity =>
+			modelBuilder.Entity<DnsMailRecordDal>(entity =>
 			{
 				entity.Property(e => e.DomainName)
 					.IsRequired()
@@ -835,7 +835,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_DnsMailRecords_DnsMailProviders");
 			});
 
-			modelBuilder.Entity<DnsServer>(entity =>
+			modelBuilder.Entity<DnsServerDal>(entity =>
 			{
 				entity.Property(e => e.DnsUrl).IsRequired();
 
@@ -846,7 +846,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_DnsServers_Domain");
 			});
 
-			modelBuilder.Entity<Domain>(entity =>
+			modelBuilder.Entity<DomainDal>(entity =>
 			{
 				entity.HasIndex(e => e.ServiceId, "UK_ServiceId_Unique")
 					.IsUnique();
@@ -868,7 +868,7 @@ namespace WebApplicationOpen.Models.Scaffold
 
 				entity.HasOne(d => d.Service)
 					.WithOne(p => p.Domain)
-					.HasForeignKey<Domain>(d => d.ServiceId)
+					.HasForeignKey<DomainDal>(d => d.ServiceId)
 					.OnDelete(DeleteBehavior.ClientSetNull)
 					.HasConstraintName("FK_Domain_Service");
 
@@ -878,7 +878,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_Domain_WhoisInfo");
 			});
 
-			modelBuilder.Entity<DomainDescendant>(entity =>
+			modelBuilder.Entity<DomainDescendantDal>(entity =>
 			{
 				entity.Property(e => e.CreateDate).HasColumnType("datetime");
 
@@ -904,7 +904,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_DomainDescendants_Registrants");
 			});
 
-			modelBuilder.Entity<DomainDescendantContract>(entity =>
+			modelBuilder.Entity<DomainDescendantContractDal>(entity =>
 			{
 				entity.HasKey(e => e.DescendantContractId)
 					.HasName("PK_DescendantsContracts");
@@ -920,7 +920,7 @@ namespace WebApplicationOpen.Models.Scaffold
 				entity.Property(e => e.ValidityDate).HasColumnType("date");
 			});
 
-			modelBuilder.Entity<DomainHistory>(entity =>
+			modelBuilder.Entity<DomainHistoryDal>(entity =>
 			{
 				entity.ToTable("DomainHistory");
 
@@ -938,7 +938,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_DomainHistory_DomainZones");
 			});
 
-			modelBuilder.Entity<DomainLog>(entity =>
+			modelBuilder.Entity<DomainLogDal>(entity =>
 			{
 				entity.ToTable("DomainLog");
 
@@ -955,7 +955,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_DomainLog_LogRepository");
 			});
 
-			modelBuilder.Entity<DomainXrrpQueue>(entity =>
+			modelBuilder.Entity<DomainXrrpQueueDal>(entity =>
 			{
 				entity.HasKey(e => e.DomainQueueId);
 
@@ -972,7 +972,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_DomainXrrpQueue_Domains");
 			});
 
-			modelBuilder.Entity<DomainZone>(entity =>
+			modelBuilder.Entity<DomainZoneDal>(entity =>
 			{
 				entity.Property(e => e.DomainZoneId).ValueGeneratedNever();
 
@@ -986,7 +986,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(16);
 			});
 
-			modelBuilder.Entity<DsRecord>(entity =>
+			modelBuilder.Entity<DsRecordDal>(entity =>
 			{
 				entity.Property(e => e.Alg)
 					.IsRequired()
@@ -1011,7 +1011,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_DsRecords_Domains");
 			});
 
-			modelBuilder.Entity<EgrRequisite>(entity =>
+			modelBuilder.Entity<EgrRequisiteDal>(entity =>
 			{
 				entity.HasKey(e => e.EgrRequisitesId);
 
@@ -1030,14 +1030,14 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(100);
 			});
 
-			modelBuilder.Entity<EmailFrom>(entity =>
+			modelBuilder.Entity<EmailFromDal>(entity =>
 			{
 				entity.Property(e => e.From)
 					.IsRequired()
 					.HasMaxLength(100);
 			});
 
-			modelBuilder.Entity<HostingServer>(entity =>
+			modelBuilder.Entity<HostingServerDal>(entity =>
 			{
 				entity.Property(e => e.Dcnumber)
 					.IsRequired()
@@ -1061,7 +1061,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_HostingServers_HostingServerTypes");
 			});
 
-			modelBuilder.Entity<HostingServerType>(entity =>
+			modelBuilder.Entity<HostingServerTypeDal>(entity =>
 			{
 				entity.Property(e => e.HostingServerTypeId).ValueGeneratedNever();
 
@@ -1070,7 +1070,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(64);
 			});
 
-			modelBuilder.Entity<HostingServersIp>(entity =>
+			modelBuilder.Entity<HostingServersIpDal>(entity =>
 			{
 				entity.Property(e => e.Ip)
 					.IsRequired()
@@ -1084,7 +1084,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_HostingServersIps_HostingServers");
 			});
 
-			modelBuilder.Entity<Invoice>(entity =>
+			modelBuilder.Entity<InvoiceDal>(entity =>
 			{
 				entity.Property(e => e.AccessKey)
 					.IsRequired()
@@ -1129,7 +1129,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_Invoices_TarifficationAmountWork");
 			});
 
-			modelBuilder.Entity<InvoiceEmoneyPayment>(entity =>
+			modelBuilder.Entity<InvoiceEmoneyPaymentDal>(entity =>
 			{
 				entity.HasIndex(e => e.InvoiceId, "UK_InvoiceId_Unique")
 					.IsUnique();
@@ -1138,7 +1138,7 @@ namespace WebApplicationOpen.Models.Scaffold
 
 				entity.HasOne(d => d.Invoice)
 					.WithOne(p => p.InvoiceEmoneyPayment)
-					.HasForeignKey<InvoiceEmoneyPayment>(d => d.InvoiceId)
+					.HasForeignKey<InvoiceEmoneyPaymentDal>(d => d.InvoiceId)
 					.OnDelete(DeleteBehavior.ClientSetNull)
 					.HasConstraintName("FK_InvoiceEmoneyPayment_Invoice");
 
@@ -1149,7 +1149,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_InvoiceEmoneyPayment_EmoneyPaymentStatus");
 			});
 
-			modelBuilder.Entity<InvoicePayment>(entity =>
+			modelBuilder.Entity<InvoicePaymentDal>(entity =>
 			{
 				entity.HasIndex(e => e.InvoiceId, "UK_InvoicePayment_Unique")
 					.IsUnique();
@@ -1172,12 +1172,12 @@ namespace WebApplicationOpen.Models.Scaffold
 
 				entity.HasOne(d => d.Invoice)
 					.WithOne(p => p.InvoicePayment)
-					.HasForeignKey<InvoicePayment>(d => d.InvoiceId)
+					.HasForeignKey<InvoicePaymentDal>(d => d.InvoiceId)
 					.OnDelete(DeleteBehavior.ClientSetNull)
 					.HasConstraintName("FK_InvoicePayment_Invoice");
 			});
 
-			modelBuilder.Entity<InvoicePaymentRequisite>(entity =>
+			modelBuilder.Entity<InvoicePaymentRequisiteDal>(entity =>
 			{
 				entity.HasKey(e => e.InvoicePaymentRequsitesId)
 					.HasName("PK_InvoiceBankRequsites");
@@ -1219,7 +1219,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_InvoiceBankRequisites_InvoicePayments1");
 			});
 
-			modelBuilder.Entity<JuridicalRequisite>(entity =>
+			modelBuilder.Entity<JuridicalRequisiteDal>(entity =>
 			{
 				entity.HasIndex(e => e.SecondaryAddressId, "IX_JuridicalRequisites_Address")
 					.IsUnique();
@@ -1234,11 +1234,11 @@ namespace WebApplicationOpen.Models.Scaffold
 
 				entity.HasOne(d => d.SecondaryAddress)
 					.WithOne(p => p.JuridicalRequisite)
-					.HasForeignKey<JuridicalRequisite>(d => d.SecondaryAddressId)
+					.HasForeignKey<JuridicalRequisiteDal>(d => d.SecondaryAddressId)
 					.HasConstraintName("FK_JuridicalRequisites_Address");
 			});
 
-			modelBuilder.Entity<Language>(entity =>
+			modelBuilder.Entity<LanguageDal>(entity =>
 			{
 				entity.Property(e => e.LanguageId).ValueGeneratedNever();
 
@@ -1248,7 +1248,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasColumnName("Language");
 			});
 
-			modelBuilder.Entity<LocalRegistryMessage>(entity =>
+			modelBuilder.Entity<LocalRegistryMessageDal>(entity =>
 			{
 				entity.Property(e => e.DomainName)
 					.IsRequired()
@@ -1270,7 +1270,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_LocalRegistryMessage_PendingOperation");
 			});
 
-			modelBuilder.Entity<LogEvent>(entity =>
+			modelBuilder.Entity<LogEventDal>(entity =>
 			{
 				entity.Property(e => e.Value).IsRequired();
 
@@ -1287,14 +1287,14 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_LogEvent_LogRepository");
 			});
 
-			modelBuilder.Entity<LogEventType>(entity =>
+			modelBuilder.Entity<LogEventTypeDal>(entity =>
 			{
 				entity.Property(e => e.LogEventTypeId).ValueGeneratedNever();
 
 				entity.Property(e => e.Description).IsRequired();
 			});
 
-			modelBuilder.Entity<LogNote>(entity =>
+			modelBuilder.Entity<LogNoteDal>(entity =>
 			{
 				entity.ToTable("LogNote");
 
@@ -1333,7 +1333,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_LogRepository_UserSessions");
 			});
 
-			modelBuilder.Entity<LogType>(entity =>
+			modelBuilder.Entity<LogTypeDal>(entity =>
 			{
 				entity.Property(e => e.LogTypeId).ValueGeneratedNever();
 
@@ -1342,7 +1342,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<NotificationEvent>(entity =>
+			modelBuilder.Entity<NotificationEventDal>(entity =>
 			{
 				entity.ToTable("NotificationEvent");
 
@@ -1353,7 +1353,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<NotificationSchedule>(entity =>
+			modelBuilder.Entity<NotificationScheduleDal>(entity =>
 			{
 				entity.Property(e => e.NotificationScheduleId).ValueGeneratedNever();
 
@@ -1364,7 +1364,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_NotificationSchedules_ServiceTypes");
 			});
 
-			modelBuilder.Entity<NotificationServiceCurrentMessage>(entity =>
+			modelBuilder.Entity<NotificationServiceCurrentMessageDal>(entity =>
 			{
 				entity.HasOne(d => d.Client)
 					.WithMany(p => p.NotificationServiceCurrentMessages)
@@ -1377,7 +1377,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_NotificationServiceCurrentMessages_Services");
 			});
 
-			modelBuilder.Entity<OrderAction>(entity =>
+			modelBuilder.Entity<OrderActionDal>(entity =>
 			{
 				entity.Property(e => e.OrderActionId).ValueGeneratedNever();
 
@@ -1386,7 +1386,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(100);
 			});
 
-			modelBuilder.Entity<PassportRequisite>(entity =>
+			modelBuilder.Entity<PassportRequisiteDal>(entity =>
 			{
 				entity.HasKey(e => e.PassportRequisitesId);
 
@@ -1407,7 +1407,7 @@ namespace WebApplicationOpen.Models.Scaffold
 				entity.Property(e => e.PassportSeries).HasMaxLength(10);
 			});
 
-			modelBuilder.Entity<PasswordRecovery>(entity =>
+			modelBuilder.Entity<PasswordRecoveryDal>(entity =>
 			{
 				entity.ToTable("PasswordRecovery");
 
@@ -1429,7 +1429,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_PasswordRecovery_Users");
 			});
 
-			modelBuilder.Entity<PasswordRecoveryType>(entity =>
+			modelBuilder.Entity<PasswordRecoveryTypeDal>(entity =>
 			{
 				entity.Property(e => e.PasswordRecoveryTypeId).ValueGeneratedNever();
 
@@ -1438,7 +1438,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(64);
 			});
 
-			modelBuilder.Entity<PaymentStatus>(entity =>
+			modelBuilder.Entity<PaymentStatusDal>(entity =>
 			{
 				entity.Property(e => e.PaymentStatusId).ValueGeneratedNever();
 
@@ -1447,7 +1447,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<PaymentType>(entity =>
+			modelBuilder.Entity<PaymentTypeDal>(entity =>
 			{
 				entity.Property(e => e.PaymentTypeId).ValueGeneratedNever();
 
@@ -1456,7 +1456,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<PendingOperation>(entity =>
+			modelBuilder.Entity<PendingOperationDal>(entity =>
 			{
 				entity.Property(e => e.Description)
 					.IsRequired()
@@ -1464,7 +1464,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.IsUnicode(false);
 			});
 
-			modelBuilder.Entity<Period>(entity =>
+			modelBuilder.Entity<PeriodDal>(entity =>
 			{
 				entity.HasOne(d => d.PeriodUnit)
 					.WithMany(p => p.Periods)
@@ -1473,7 +1473,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_Periods_PeriodUnits");
 			});
 
-			modelBuilder.Entity<PeriodUnit>(entity =>
+			modelBuilder.Entity<PeriodUnitDal>(entity =>
 			{
 				entity.Property(e => e.PeriodUnitId).ValueGeneratedNever();
 
@@ -1482,7 +1482,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(32);
 			});
 
-			modelBuilder.Entity<PersonalDiscount>(entity =>
+			modelBuilder.Entity<PersonalDiscountDal>(entity =>
 			{
 				entity.Property(e => e.ExpirationDate).HasColumnType("datetime");
 
@@ -1495,7 +1495,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_PersonalDiscounts_Clients");
 			});
 
-			modelBuilder.Entity<PowerDnsregistryQueue>(entity =>
+			modelBuilder.Entity<PowerDnsregistryQueueDal>(entity =>
 			{
 				entity.ToTable("PowerDNSRegistryQueue");
 
@@ -1508,14 +1508,14 @@ namespace WebApplicationOpen.Models.Scaffold
 				entity.Property(e => e.XrrpResultCode).HasMaxLength(15);
 			});
 
-			modelBuilder.Entity<PromoCode>(entity =>
+			modelBuilder.Entity<PromoCodeDal>(entity =>
 			{
 				entity.Property(e => e.PeriodEnd).HasColumnType("datetime");
 
 				entity.Property(e => e.PeriodStart).HasColumnType("datetime");
 			});
 
-			modelBuilder.Entity<PromoCodeDiscountValue>(entity =>
+			modelBuilder.Entity<PromoCodeDiscountValueDal>(entity =>
 			{
 				entity.Property(e => e.Discount).HasColumnType("decimal(30, 4)");
 
@@ -1531,7 +1531,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_PromoCodeDiscountValues_PromoCode");
 			});
 
-			modelBuilder.Entity<PromoCodeService>(entity =>
+			modelBuilder.Entity<PromoCodeServiceDal>(entity =>
 			{
 				entity.Property(e => e.DataPaid).HasColumnType("datetime");
 
@@ -1542,7 +1542,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_PromoCodeServices_PromoCode");
 			});
 
-			modelBuilder.Entity<PromoCodeTypeService>(entity =>
+			modelBuilder.Entity<PromoCodeTypeServiceDal>(entity =>
 			{
 				entity.HasOne(d => d.Period)
 					.WithMany(p => p.PromoCodeTypeServices)
@@ -1572,7 +1572,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_PromoCodeTypeServices_TarifficationAmountWork");
 			});
 
-			modelBuilder.Entity<Redirect>(entity =>
+			modelBuilder.Entity<RedirectDal>(entity =>
 			{
 				entity.Property(e => e.DomainName)
 					.IsRequired()
@@ -1593,7 +1593,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_Redirects_RedirectActions");
 			});
 
-			modelBuilder.Entity<RedirectAction>(entity =>
+			modelBuilder.Entity<RedirectActionDal>(entity =>
 			{
 				entity.Property(e => e.RedirectActionId).ValueGeneratedNever();
 
@@ -1602,7 +1602,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<Registrant>(entity =>
+			modelBuilder.Entity<RegistrantDal>(entity =>
 			{
 				entity.Property(e => e.ChiefName).HasMaxLength(255);
 
@@ -1653,7 +1653,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_Registrants_ClientTypes");
 			});
 
-			modelBuilder.Entity<RegistrationOwnership>(entity =>
+			modelBuilder.Entity<RegistrationOwnershipDal>(entity =>
 			{
 				entity.Property(e => e.RegistrationOwnershipId).ValueGeneratedNever();
 
@@ -1662,7 +1662,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(64);
 			});
 
-			modelBuilder.Entity<Role>(entity =>
+			modelBuilder.Entity<RoleDal>(entity =>
 			{
 				entity.Property(e => e.RoleId).ValueGeneratedNever();
 
@@ -1671,7 +1671,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(32);
 			});
 
-			modelBuilder.Entity<Service>(entity =>
+			modelBuilder.Entity<ServiceDal>(entity =>
 			{
 				entity.Property(e => e.CertificateAddress).HasMaxLength(300);
 
@@ -1731,7 +1731,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_Services_WhoIsInfos");
 			});
 
-			modelBuilder.Entity<ServiceClass>(entity =>
+			modelBuilder.Entity<ServiceClassDal>(entity =>
 			{
 				entity.Property(e => e.ServiceClassId).ValueGeneratedNever();
 
@@ -1740,7 +1740,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(64);
 			});
 
-			modelBuilder.Entity<ServiceHistory>(entity =>
+			modelBuilder.Entity<ServiceHistoryDal>(entity =>
 			{
 				entity.ToTable("ServiceHistory");
 
@@ -1795,7 +1795,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_ServiceHistory_Vats");
 			});
 
-			modelBuilder.Entity<ServiceInfo>(entity =>
+			modelBuilder.Entity<ServiceInfoDal>(entity =>
 			{
 				entity.ToTable("ServiceInfo");
 
@@ -1808,12 +1808,12 @@ namespace WebApplicationOpen.Models.Scaffold
 
 				entity.HasOne(d => d.Service)
 					.WithOne(p => p.ServiceInfo)
-					.HasForeignKey<ServiceInfo>(d => d.ServiceId)
+					.HasForeignKey<ServiceInfoDal>(d => d.ServiceId)
 					.OnDelete(DeleteBehavior.ClientSetNull)
 					.HasConstraintName("FK_Services_ServiceInfo");
 			});
 
-			modelBuilder.Entity<ServiceNotificationQueue>(entity =>
+			modelBuilder.Entity<ServiceNotificationQueueDal>(entity =>
 			{
 				entity.ToTable("ServiceNotificationQueue");
 
@@ -1835,7 +1835,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_ServiceNotificationQueue_Services");
 			});
 
-			modelBuilder.Entity<ServiceRegistration>(entity =>
+			modelBuilder.Entity<ServiceRegistrationDal>(entity =>
 			{
 				entity.Property(e => e.Description)
 					.IsRequired()
@@ -1885,7 +1885,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_ServiceRegistrations_TaxService");
 			});
 
-			modelBuilder.Entity<ServiceRegistrationStatus>(entity =>
+			modelBuilder.Entity<ServiceRegistrationStatusDal>(entity =>
 			{
 				entity.Property(e => e.ServiceRegistrationStatusId).ValueGeneratedNever();
 
@@ -1894,7 +1894,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(64);
 			});
 
-			modelBuilder.Entity<ServiceStatistic>(entity =>
+			modelBuilder.Entity<ServiceStatisticDal>(entity =>
 			{
 				entity.Property(e => e.Date).HasColumnType("date");
 
@@ -1903,14 +1903,14 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(100);
 			});
 
-			modelBuilder.Entity<ServiceStatus>(entity =>
+			modelBuilder.Entity<ServiceStatusDal>(entity =>
 			{
 				entity.Property(e => e.ServiceStatusId).ValueGeneratedNever();
 
 				entity.Property(e => e.Description).HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<ServiceType>(entity =>
+			modelBuilder.Entity<ServiceTypeDal>(entity =>
 			{
 				entity.Property(e => e.ServiceTypeId).ValueGeneratedNever();
 
@@ -1925,7 +1925,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_ServiceTypes_ServiceClasses");
 			});
 
-			modelBuilder.Entity<ServicesInHistory>(entity =>
+			modelBuilder.Entity<ServicesInHistoryDal>(entity =>
 			{
 				entity.ToTable("ServicesInHistory");
 
@@ -1941,7 +1941,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_ServicesInHistory_Services");
 			});
 
-			modelBuilder.Entity<SslApiQueue>(entity =>
+			modelBuilder.Entity<SslApiQueueDal>(entity =>
 			{
 				entity.ToTable("SslApiQueue");
 
@@ -2025,7 +2025,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_SslCertificateTypes_ClientInfoForSslOrder");
 			});
 
-			modelBuilder.Entity<SslCertificateType>(entity =>
+			modelBuilder.Entity<SslCertificateTypeDal>(entity =>
 			{
 				entity.Property(e => e.SslCertificateTypeId).ValueGeneratedNever();
 
@@ -2034,7 +2034,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<SslOrderStatus>(entity =>
+			modelBuilder.Entity<SslOrderStatusDal>(entity =>
 			{
 				entity.Property(e => e.SslOrderStatusId).ValueGeneratedNever();
 
@@ -2043,7 +2043,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<SslService>(entity =>
+			modelBuilder.Entity<SslServiceDal>(entity =>
 			{
 				entity.Property(e => e.Csr).HasColumnName("CSR");
 
@@ -2066,7 +2066,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_SslServices_SslVerificationTypes");
 			});
 
-			modelBuilder.Entity<SslTariffSetting>(entity =>
+			modelBuilder.Entity<SslTariffSettingDal>(entity =>
 			{
 				entity.HasOne(d => d.ParentTariffPlan)
 					.WithMany(p => p.SslTariffSettingParentTariffPlans)
@@ -2086,7 +2086,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_SslTariffSettings_TariffPlans");
 			});
 
-			modelBuilder.Entity<SslVerification>(entity =>
+			modelBuilder.Entity<SslVerificationDal>(entity =>
 			{
 				entity.HasOne(d => d.SslTariffSetting)
 					.WithMany(p => p.SslVerifications)
@@ -2101,7 +2101,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_SslVerifications_SslVerificationTypes");
 			});
 
-			modelBuilder.Entity<SslVerificationType>(entity =>
+			modelBuilder.Entity<SslVerificationTypeDal>(entity =>
 			{
 				entity.Property(e => e.SslVerificationTypeId).ValueGeneratedNever();
 
@@ -2110,7 +2110,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<Statistic>(entity =>
+			modelBuilder.Entity<StatisticDal>(entity =>
 			{
 				entity.ToTable("Statistic");
 
@@ -2153,7 +2153,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_Statistic_TarifficationAmountWork");
 			});
 
-			modelBuilder.Entity<SystemNotification>(entity =>
+			modelBuilder.Entity<SystemNotificationDal>(entity =>
 			{
 				entity.Property(e => e.CreateDate).HasColumnType("datetime");
 
@@ -2174,7 +2174,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_SystemNotifications_SystemNotificationTypes");
 			});
 
-			modelBuilder.Entity<SystemNotificationErrorLevel>(entity =>
+			modelBuilder.Entity<SystemNotificationErrorLevelDal>(entity =>
 			{
 				entity.HasKey(e => e.SystemNotificationErrorLevelTypeId)
 					.HasName("PK_SystemNotificationsErrorLevel");
@@ -2186,7 +2186,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(100);
 			});
 
-			modelBuilder.Entity<SystemNotificationType>(entity =>
+			modelBuilder.Entity<SystemNotificationTypeDal>(entity =>
 			{
 				entity.Property(e => e.SystemNotificationTypeId).ValueGeneratedNever();
 
@@ -2195,7 +2195,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(100);
 			});
 
-			modelBuilder.Entity<TariffPlan>(entity =>
+			modelBuilder.Entity<TariffPlanDal>(entity =>
 			{
 				entity.Property(e => e.PeriodUnitId).HasDefaultValueSql("((1))");
 
@@ -2224,7 +2224,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_TariffPlans_TariffPlanTarificationTypes");
 			});
 
-			modelBuilder.Entity<TariffPlanCost>(entity =>
+			modelBuilder.Entity<TariffPlanCostDal>(entity =>
 			{
 				entity.Property(e => e.OrderActionId).HasDefaultValueSql("((1))");
 
@@ -2247,7 +2247,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_TariffPlanCost_TariffPlan");
 			});
 
-			modelBuilder.Entity<TariffPlanDuration>(entity =>
+			modelBuilder.Entity<TariffPlanDurationDal>(entity =>
 			{
 				entity.Property(e => e.DurationMonths).HasDefaultValueSql("((1))");
 
@@ -2268,7 +2268,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_TariffPlanDurations_TarifficationAmountWork");
 			});
 
-			modelBuilder.Entity<TariffPlanInfo>(entity =>
+			modelBuilder.Entity<TariffPlanInfoDal>(entity =>
 			{
 				entity.Property(e => e.Description)
 					.IsRequired()
@@ -2291,7 +2291,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_TariffPlanInfo_TariffPlan1");
 			});
 
-			modelBuilder.Entity<TariffPlanTarificationType>(entity =>
+			modelBuilder.Entity<TariffPlanTarificationTypeDal>(entity =>
 			{
 				entity.Property(e => e.TariffPlanTarificationTypeId).ValueGeneratedNever();
 
@@ -2300,7 +2300,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<TarifficationAmountWork>(entity =>
+			modelBuilder.Entity<TarifficationAmountWorkDal>(entity =>
 			{
 				entity.ToTable("TarifficationAmountWork");
 
@@ -2313,7 +2313,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_TarifficationAmountWork_PeriodUnits");
 			});
 
-			modelBuilder.Entity<TransferIncomingRequest>(entity =>
+			modelBuilder.Entity<TransferIncomingRequestDal>(entity =>
 			{
 				entity.HasKey(e => e.DomainId);
 
@@ -2327,12 +2327,12 @@ namespace WebApplicationOpen.Models.Scaffold
 
 				entity.HasOne(d => d.Domain)
 					.WithOne(p => p.TransferIncomingRequest)
-					.HasForeignKey<TransferIncomingRequest>(d => d.DomainId)
+					.HasForeignKey<TransferIncomingRequestDal>(d => d.DomainId)
 					.OnDelete(DeleteBehavior.ClientSetNull)
 					.HasConstraintName("FK_TransferIncomingRequests_Domains");
 			});
 
-			modelBuilder.Entity<TransferOperation>(entity =>
+			modelBuilder.Entity<TransferOperationDal>(entity =>
 			{
 				entity.Property(e => e.TransferOperationId).ValueGeneratedNever();
 
@@ -2342,7 +2342,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.IsFixedLength();
 			});
 
-			modelBuilder.Entity<TransferOutgoingRequest>(entity =>
+			modelBuilder.Entity<TransferOutgoingRequestDal>(entity =>
 			{
 				entity.HasIndex(e => e.DomainName, "UK_DomainName")
 					.IsUnique();
@@ -2372,7 +2372,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_TransferOutgoingRequests_TransferOperations");
 			});
 
-			modelBuilder.Entity<UnsentMail>(entity =>
+			modelBuilder.Entity<UnsentMailDal>(entity =>
 			{
 				entity.ToTable("UnsentMail");
 
@@ -2392,7 +2392,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_UnsentMail_EmailFroms");
 			});
 
-			modelBuilder.Entity<UnsentSmsMessage>(entity =>
+			modelBuilder.Entity<UnsentSmsMessageDal>(entity =>
 			{
 				entity.Property(e => e.PhoneNumber)
 					.IsRequired()
@@ -2410,7 +2410,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_UnsentSmsMessages_Clients");
 			});
 
-			modelBuilder.Entity<User>(entity =>
+			modelBuilder.Entity<UserDal>(entity =>
 			{
 				entity.HasIndex(e => e.Login, "UK_Login_Unique")
 					.IsUnique();
@@ -2434,7 +2434,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasDefaultValueSql("(((1945)/(12))/(12))");
 			});
 
-			modelBuilder.Entity<UserInRole>(entity =>
+			modelBuilder.Entity<UserInRoleDal>(entity =>
 			{
 				entity.HasKey(e => e.UserInRolesId);
 
@@ -2454,7 +2454,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_UserInRoles_Users");
 			});
 
-			modelBuilder.Entity<UserLog>(entity =>
+			modelBuilder.Entity<UserLogDal>(entity =>
 			{
 				entity.ToTable("UserLog");
 
@@ -2471,7 +2471,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_UserLog_Users");
 			});
 
-			modelBuilder.Entity<UserSession>(entity =>
+			modelBuilder.Entity<UserSessionDal>(entity =>
 			{
 				entity.Property(e => e.Ip)
 					.IsRequired()
@@ -2481,7 +2481,7 @@ namespace WebApplicationOpen.Models.Scaffold
 				entity.Property(e => e.StartDate).HasColumnType("datetime");
 			});
 
-			modelBuilder.Entity<Variable>(entity =>
+			modelBuilder.Entity<VariableDal>(entity =>
 			{
 				entity.HasKey(e => e.Name);
 
@@ -2492,7 +2492,7 @@ namespace WebApplicationOpen.Models.Scaffold
 				entity.Property(e => e.Value).HasMaxLength(256);
 			});
 
-			modelBuilder.Entity<Vat>(entity =>
+			modelBuilder.Entity<VatDal>(entity =>
 			{
 				entity.Property(e => e.OfficialCreationDate)
 					.HasColumnType("datetime")
@@ -2501,7 +2501,7 @@ namespace WebApplicationOpen.Models.Scaffold
 				entity.Property(e => e.StartDate).HasColumnType("date");
 			});
 
-			modelBuilder.Entity<VerificationField>(entity =>
+			modelBuilder.Entity<VerificationFieldDal>(entity =>
 			{
 				entity.Property(e => e.VerificationFieldId).ValueGeneratedNever();
 
@@ -2510,7 +2510,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(50);
 			});
 
-			modelBuilder.Entity<VerificationLog>(entity =>
+			modelBuilder.Entity<VerificationLogDal>(entity =>
 			{
 				entity.ToTable("VerificationLog");
 
@@ -2531,7 +2531,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_VerificationLog_VerificationResults");
 			});
 
-			modelBuilder.Entity<VerificationResult>(entity =>
+			modelBuilder.Entity<VerificationResultDal>(entity =>
 			{
 				entity.HasOne(d => d.Client)
 					.WithMany(p => p.VerificationResults)
@@ -2552,7 +2552,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_VerificationResults_VerificationStatuses");
 			});
 
-			modelBuilder.Entity<VerificationStatus>(entity =>
+			modelBuilder.Entity<VerificationStatusDal>(entity =>
 			{
 				entity.Property(e => e.VerificationStatusId).ValueGeneratedNever();
 
@@ -2562,7 +2562,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasColumnName("VerificationStatus");
 			});
 
-			modelBuilder.Entity<VirtualHosting>(entity =>
+			modelBuilder.Entity<VirtualHostingDal>(entity =>
 			{
 				entity.ToTable("VirtualHosting");
 
@@ -2577,7 +2577,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_VirtualHosting_Services");
 			});
 
-			modelBuilder.Entity<Vp>(entity =>
+			modelBuilder.Entity<VpDal>(entity =>
 			{
 				entity.HasKey(e => e.VpsId);
 
@@ -2598,7 +2598,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_Vps_VpsConfigs");
 			});
 
-			modelBuilder.Entity<VpsConfig>(entity =>
+			modelBuilder.Entity<VpsConfigDal>(entity =>
 			{
 				entity.HasOne(d => d.OsType)
 					.WithMany(p => p.VpsConfigs)
@@ -2606,7 +2606,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_VpsConfigs_VpsOsTypes");
 			});
 
-			modelBuilder.Entity<VpsConfigItemsCost>(entity =>
+			modelBuilder.Entity<VpsConfigItemsCostDal>(entity =>
 			{
 				entity.Property(e => e.CpuCore).HasColumnType("decimal(30, 10)");
 
@@ -2627,7 +2627,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_VpsConfigItemsCosts_Currencies");
 			});
 
-			modelBuilder.Entity<VpsDrife>(entity =>
+			modelBuilder.Entity<VpsDrifeDal>(entity =>
 			{
 				entity.HasKey(e => e.VpsDriveId);
 
@@ -2644,7 +2644,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasConstraintName("FK_VpsDrives_VpsConfigs");
 			});
 
-			modelBuilder.Entity<VpsDriveType>(entity =>
+			modelBuilder.Entity<VpsDriveTypeDal>(entity =>
 			{
 				entity.Property(e => e.VpsDriveTypeId).ValueGeneratedNever();
 
@@ -2653,7 +2653,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasMaxLength(20);
 			});
 
-			modelBuilder.Entity<VpsOsType>(entity =>
+			modelBuilder.Entity<VpsOsTypeDal>(entity =>
 			{
 				entity.Property(e => e.InternalName)
 					.IsRequired()
@@ -2669,7 +2669,7 @@ namespace WebApplicationOpen.Models.Scaffold
 					.HasColumnName("UUID");
 			});
 
-			modelBuilder.Entity<VpsTariffPlan>(entity =>
+			modelBuilder.Entity<VpsTariffPlanDal>(entity =>
 			{
 				entity.HasOne(d => d.TariffPlan)
 					.WithMany(p => p.VpsTariffPlans)

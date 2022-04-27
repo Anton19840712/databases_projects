@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 
 namespace WebApplicationOpen.Models.Scaffold
 {
+	[Table("CallPendingTask")]
 	public class CallPendingTaskDal
 	{
 		public long Id { get; set; }
@@ -13,6 +15,6 @@ namespace WebApplicationOpen.Models.Scaffold
 		public long CallsCounts { get; set; }
 		public DateTime PendingExDate { get; set; }
 
-		public virtual Service Service { get; set; }
+		public virtual ServiceDal Service { get; set; }
 	}
 }

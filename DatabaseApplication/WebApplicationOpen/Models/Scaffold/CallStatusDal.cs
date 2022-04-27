@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace WebApplicationOpen.Models.Scaffold
 {
-	public class CallStatusDal
+	[Table("CallStatus")]
+	public sealed class CallStatusDal
 	{
 		public CallStatusDal()
 		{
@@ -14,6 +15,6 @@ namespace WebApplicationOpen.Models.Scaffold
 		public long Id { get; set; }
 		public string Status { get; set; }
 
-		public virtual ICollection<CallDal> Calls { get; set; }
+		public ICollection<CallDal> Calls { get; set; }
 	}
 }

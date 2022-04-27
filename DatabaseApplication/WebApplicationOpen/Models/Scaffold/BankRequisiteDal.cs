@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace WebApplicationOpen.Models.Scaffold
 {
-	public class BankRequisiteDal
+	[Table("BankRequisite")]
+	public sealed class BankRequisiteDal
 	{
 		public BankRequisiteDal()
 		{
@@ -17,6 +18,6 @@ namespace WebApplicationOpen.Models.Scaffold
 		public string BankCode { get; set; }
 		public string Payer { get; set; }
 
-		public virtual ICollection<ClientDal> Clients { get; set; }
+		public ICollection<ClientDal> Clients { get; set; }
 	}
 }

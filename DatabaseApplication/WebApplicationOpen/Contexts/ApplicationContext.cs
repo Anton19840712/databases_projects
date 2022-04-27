@@ -10,7 +10,7 @@ namespace WebApplicationOpen.Contexts
 		{
 		}
 		public DbSet<Person> Persons { get; set; }
-		public DbSet<Models.Scaffold.User> Users{ get; set; }
+		public DbSet<Models.Scaffold.UserDal> Users{ get; set; }
 		public DbSet<Models.BackEndUser> BackendUsers { get; set; }
 	}
 }

@@ -1,9 +1,10 @@
 ﻿using System;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace WebApplicationOpen.Models.Scaffold
 {
+	[Table("ApiRequestMessage")]
 	public class ApiRequestMessageDal
 	{
 		public long ApiRequestMessagesId { get; set; }

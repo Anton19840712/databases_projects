@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace WebApplicationOpen.Models.Scaffold
 {
-	public class ClientRegistrationStatusDal
+	[Table("ClientRegistrationStatus")]
+	public sealed class ClientRegistrationStatusDal
 	{
 		public ClientRegistrationStatusDal()
 		{
@@ -14,6 +15,6 @@ namespace WebApplicationOpen.Models.Scaffold
 		public int ClientRegistrationStatusId { get; set; }
 		public string Name { get; set; }
 
-		public virtual ICollection<ClientDal> Clients { get; set; }
+		public ICollection<ClientDal> Clients { get; set; }
 	}
 }

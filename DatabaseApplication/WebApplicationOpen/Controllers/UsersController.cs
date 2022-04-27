@@ -20,7 +20,7 @@ namespace WebApplicationOpen.Controllers
 
 		[HttpGet]
 		[Route("all")]
-		public async Task<List<User>> GetAllUsers()
+		public async Task<List<UserDal>> GetAllUsers()
 		{
 			return await _context.Users.ToListAsync();
 		}

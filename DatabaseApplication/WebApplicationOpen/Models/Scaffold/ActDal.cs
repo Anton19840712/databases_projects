@@ -1,9 +1,10 @@
 ﻿using System;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace WebApplicationOpen.Models.Scaffold
 {
+	[Table("Act")]
 	public class ActDal
 	{
 		public long ActId { get; set; }
@@ -20,11 +21,11 @@ namespace WebApplicationOpen.Models.Scaffold
 		public bool? RedelegateAct { get; set; }
 		public long? RedelegateClientId { get; set; }
 
-		public virtual Cost Cost { get; set; }
+		public virtual CostDal Cost { get; set; }
 		public virtual ClientDal RedelegateClient { get; set; }
-		public virtual ServiceHistory ServiceHistory { get; set; }
-		public virtual TariffPlan TariffPlan { get; set; }
-		public virtual TarifficationAmountWork TarifficationAmountWork { get; set; }
-		public virtual Vat Vat { get; set; }
+		public virtual ServiceHistoryDal ServiceHistory { get; set; }
+		public virtual TariffPlanDal TariffPlan { get; set; }
+		public virtual TarifficationAmountWorkDal TarifficationAmountWork { get; set; }
+		public virtual VatDal Vat { get; set; }
 	}
 }

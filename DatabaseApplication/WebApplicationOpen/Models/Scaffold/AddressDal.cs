@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace WebApplicationOpen.Models.Scaffold
 {
+	[Table("Address")]
 	public sealed class AddressDal
 	{
 		public AddressDal()
 		{
 			Clients = new HashSet<ClientDal>();
-			Registrants = new HashSet<Registrant>();
+			Registrants = new HashSet<RegistrantDal>();
 		}
 
 		public long AddressId { get; set; }
@@ -21,9 +22,9 @@ namespace WebApplicationOpen.Models.Scaffold
 		public string Building { get; set; }
 		public string Room { get; set; }
 
-		public Country Country { get; set; }
-		public JuridicalRequisite JuridicalRequisite { get; set; }
+		public CountryDal Country { get; set; }
+		public JuridicalRequisiteDal JuridicalRequisite { get; set; }
 		public ICollection<ClientDal> Clients { get; set; }
-		public ICollection<Registrant> Registrants { get; set; }
+		public ICollection<RegistrantDal> Registrants { get; set; }
 	}
 }
