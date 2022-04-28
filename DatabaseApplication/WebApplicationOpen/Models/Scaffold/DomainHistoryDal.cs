@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -13,6 +13,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			ServiceHistories = new HashSet<ServiceHistoryDal>();
 		}
 
+		[Key]
 		public long DomainHistoryId { get; set; }
 		public int DomainZoneId { get; set; }
 		public string Name { get; set; }

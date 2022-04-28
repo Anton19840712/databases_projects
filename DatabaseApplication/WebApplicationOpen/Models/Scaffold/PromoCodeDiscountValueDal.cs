@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("PromoCodeDiscountValue")]
 	public class PromoCodeDiscountValueDal
 	{
+		[Key]
 		public long PromoCodeDiscountValueId { get; set; }
 		public long PromoCodeId { get; set; }
 		public decimal Discount { get; set; }

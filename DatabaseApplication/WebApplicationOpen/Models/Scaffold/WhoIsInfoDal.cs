@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -14,6 +14,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Services = new HashSet<ServiceDal>();
 		}
 
+		[Key]
 		public long WhoIsInfoId { get; set; }
 		public bool? Protected { get; set; }
 		public bool? ProtectedPhone { get; set; }

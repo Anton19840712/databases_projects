@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("PersonalDiscount")]
 	public class PersonalDiscountDal
 	{
+		[Key]
 		public long PersonalDiscountId { get; set; }
 		public long ClientId { get; set; }
 		public DateTime StartDate { get; set; }

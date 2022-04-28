@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace WebApplicationOpen.Models.Scaffold
@@ -12,6 +13,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Statistics = new HashSet<StatisticDal>();
 		}
 
+		[Key]
 		public int ActionTypeId { get; set; }
 		public string ActionType1 { get; set; }
 

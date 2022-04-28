@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("Invoice")]
 	public class InvoiceDal
 	{
+		[Key]
 		public long InvoiceId { get; set; }
 		public long UniqueId { get; set; }
 		public long CostId { get; set; }

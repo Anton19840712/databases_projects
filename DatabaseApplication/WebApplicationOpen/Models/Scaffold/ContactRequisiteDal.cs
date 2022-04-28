@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Clients = new HashSet<ClientDal>();
 		}
 
+		[Key]
 		public long ContactRequisiteId { get; set; }
 		public string Phone { get; set; }
 		public string Fax { get; set; }

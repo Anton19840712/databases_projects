@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -13,6 +13,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			TariffPlanDurations = new HashSet<TariffPlanDurationDal>();
 		}
 
+		[Key]
 		public long PeriodId { get; set; }
 		public int Value { get; set; }
 		public int PeriodUnitId { get; set; }

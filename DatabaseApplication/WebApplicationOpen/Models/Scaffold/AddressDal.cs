@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -13,6 +13,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Registrants = new HashSet<RegistrantDal>();
 		}
 
+		[Key]
 		public long AddressId { get; set; }
 		public int CountryId { get; set; }
 		public string ZipCode { get; set; }

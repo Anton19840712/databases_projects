@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("SslService")]
 	public class SslServiceDal
 	{
+		[Key]
 		public long SslServiceId { get; set; }
 		public long ServiceId { get; set; }
 		public int SslVerificationTypeId { get; set; }

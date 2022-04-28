@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("DomainXrrpQueue")]
 	public class DomainXrrpQueueDal
 	{
+		[Key]
 		public long DomainQueueId { get; set; }
 		public long DomainId { get; set; }
 		public int XrrpCommand { get; set; }

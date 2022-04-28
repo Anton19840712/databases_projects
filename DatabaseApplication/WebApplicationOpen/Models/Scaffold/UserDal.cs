@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("User")]
@@ -12,7 +11,7 @@ namespace WebApplicationOpen.Models.Scaffold
 		public UserDal()
 		{
 			Clients = new HashSet<ClientDal>();
-			LogRepositories = new HashSet<LogRepository>();
+			LogRepositories = new HashSet<LogRepositoryDal>();
 			PasswordRecoveries = new HashSet<PasswordRecoveryDal>();
 			UserInRoles = new HashSet<UserInRoleDal>();
 			UserLogs = new HashSet<UserLogDal>();
@@ -29,7 +28,7 @@ namespace WebApplicationOpen.Models.Scaffold
 
 		public BackEndUserDal BackEndUser { get; set; }
 		public ICollection<ClientDal> Clients { get; set; }
-		public ICollection<LogRepository> LogRepositories { get; set; }
+		public ICollection<LogRepositoryDal> LogRepositories { get; set; }
 		public ICollection<PasswordRecoveryDal> PasswordRecoveries { get; set; }
 		public ICollection<UserInRoleDal> UserInRoles { get; set; }
 		public ICollection<UserLogDal> UserLogs { get; set; }

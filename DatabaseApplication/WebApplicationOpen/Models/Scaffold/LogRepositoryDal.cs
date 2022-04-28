@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -16,6 +16,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			UserLogs = new HashSet<UserLogDal>();
 		}
 
+		[Key]
 		public long LogId { get; set; }
 		public long UserId { get; set; }
 		public int LogTypeId { get; set; }

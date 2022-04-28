@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			VpsDrives = new HashSet<VpsDrifeDal>();
 		}
 
+		[Key]
 		public int VpsDriveTypeId { get; set; }
 		public string Value { get; set; }
 

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("DebitBalance")]
 	public class DebitBalanceDal
 	{
+		[Key]
 		public long DebitBalanceId { get; set; }
 		public long ClientId { get; set; }
 		public int BalanceTypeId { get; set; }

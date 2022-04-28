@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("TransferOutgoingRequest")]
 	public class TransferOutgoingRequestDal
 	{
+		[Key]
 		public long TransferOutgoingRequestId { get; set; }
 		public long ClientId { get; set; }
 		public string DomainName { get; set; }

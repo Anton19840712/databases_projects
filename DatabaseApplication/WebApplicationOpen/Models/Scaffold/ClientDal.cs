@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using WebApplicationOpen.Models.Scaffold;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -29,6 +30,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			VerificationResults = new HashSet<VerificationResultDal>();
 		}
 
+		[Key]
 		public long ClientId { get; set; }
 		public long UserId { get; set; }
 		public long WhoIsInfoId { get; set; }

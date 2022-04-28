@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("ApiRequestMessage")]
 	public class ApiRequestMessageDal
 	{
+		[Key]
 		public long ApiRequestMessagesId { get; set; }
 		public long ClientId { get; set; }
 		public string Domain { get; set; }

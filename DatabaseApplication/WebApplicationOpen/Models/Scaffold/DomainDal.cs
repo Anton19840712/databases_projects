@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -16,6 +16,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Redirects = new HashSet<RedirectDal>();
 		}
 
+		[Key]
 		public long DomainId { get; set; }
 		public long ServiceId { get; set; }
 		public int DomainZoneId { get; set; }

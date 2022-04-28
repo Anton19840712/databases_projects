@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -14,6 +14,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			VpsTariffPlans = new HashSet<VpsTariffPlanDal>();
 		}
 
+		[Key]
 		public long VpsConfigId { get; set; }
 		public int? OsTypeId { get; set; }
 		public int CpuCores { get; set; }

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("PowerDnsregistryQueue")]
 	public class PowerDnsregistryQueueDal
 	{
+		[Key]
 		public long Id { get; set; }
 		public string DomainName { get; set; }
 		public int XrrpCommand { get; set; }

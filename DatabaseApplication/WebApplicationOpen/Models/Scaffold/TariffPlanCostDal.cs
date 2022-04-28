@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("TariffPlanCost")]
 	public class TariffPlanCostDal
 	{
+		[Key]
 		public long TariffPlanCostId { get; set; }
 		public long TariffPlanId { get; set; }
 		public long CostId { get; set; }

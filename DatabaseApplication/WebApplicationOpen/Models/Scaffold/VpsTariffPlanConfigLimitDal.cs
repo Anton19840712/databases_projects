@@ -1,9 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("VpsTariffPlanConfigLimit")]
 	public class VpsTariffPlanConfigLimitDal
 	{
+		[Key]
 		public long VpsTariffPlanConfigLimitId { get; set; }
 		public int MaxCpuCoreCount { get; set; }
 		public int MaxRamInMb { get; set; }

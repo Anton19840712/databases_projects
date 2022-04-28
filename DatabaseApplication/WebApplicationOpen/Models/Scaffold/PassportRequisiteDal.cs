@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Clients = new HashSet<ClientDal>();
 		}
 
+		[Key]
 		public long PassportRequisitesId { get; set; }
 		public string PassportNumber { get; set; }
 		public string PassportIssue { get; set; }

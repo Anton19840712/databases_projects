@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("Statistic")]
 	public class StatisticDal
 	{
+		[Key]
 		public long StatisticId { get; set; }
 		public long ClientId { get; set; }
 		public long TariffPlanId { get; set; }

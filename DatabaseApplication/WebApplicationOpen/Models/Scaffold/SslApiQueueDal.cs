@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("SslApiQueue")]
 	public class SslApiQueueDal
 	{
+		[Key]
 		public long Id { get; set; }
 		public string ProductName { get; set; }
 		public int Period { get; set; }

@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("Vp")]
 	public class VpDal
 	{
+		[Key]
 		public long VpsId { get; set; }
 		public long ServiceId { get; set; }
 		public long VpsConfigId { get; set; }

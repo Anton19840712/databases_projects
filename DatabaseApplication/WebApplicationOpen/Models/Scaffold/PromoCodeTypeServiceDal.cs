@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("PromoCodeTypeService")]
 	public class PromoCodeTypeServiceDal
 	{
+		[Key]
 		public long PromoCodeTypeServiceId { get; set; }
 		public long PromoCodeId { get; set; }
 		public int ServiceTypeId { get; set; }

@@ -2,6 +2,7 @@
 
 
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -20,6 +21,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			SslApiQueues = new HashSet<SslApiQueueDal>();
 		}
 
+		[Key]
 		public int CountryId { get; set; }
 		public string CountryName { get; set; }
 

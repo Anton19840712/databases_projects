@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -21,6 +21,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			VpsTariffPlans = new HashSet<VpsTariffPlanDal>();
 		}
 
+		[Key]
 		public long TariffPlanId { get; set; }
 		public int ServiceTypeId { get; set; }
 		public int? DomainZoneId { get; set; }

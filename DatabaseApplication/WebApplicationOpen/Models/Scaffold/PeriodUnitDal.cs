@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -14,6 +14,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			TarifficationAmountWorks = new HashSet<TarifficationAmountWorkDal>();
 		}
 
+		[Key]
 		public int PeriodUnitId { get; set; }
 		public string Unit { get; set; }
 

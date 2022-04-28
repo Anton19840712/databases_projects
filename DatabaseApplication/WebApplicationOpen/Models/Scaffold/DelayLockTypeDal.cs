@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			DelayLocks = new HashSet<DelayLockDal>();
 		}
 
+		[Key]
 		public int DelayLockTypeId { get; set; }
 		public string Description { get; set; }
 

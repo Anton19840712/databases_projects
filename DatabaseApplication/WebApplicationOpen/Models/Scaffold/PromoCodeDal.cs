@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -16,6 +16,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			PromoCodeTypeServices = new HashSet<PromoCodeTypeServiceDal>();
 		}
 
+		[Key]
 		public long PromoCodeId { get; set; }
 		public string Name { get; set; }
 		public int PromoCodeBy { get; set; }

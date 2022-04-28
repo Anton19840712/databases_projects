@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Clients = new HashSet<ClientDal>();
 		}
 
+		[Key]
 		public long EgrRequisitesId { get; set; }
 		public string Number { get; set; }
 		public string Registrar { get; set; }

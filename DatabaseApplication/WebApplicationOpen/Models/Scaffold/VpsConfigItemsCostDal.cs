@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("VpsConfigItemsCost")]
 	public class VpsConfigItemsCostDal
 	{
+		[Key]
 		public long VpsConfigItemsCostId { get; set; }
 		public int CurrencyId { get; set; }
 		public decimal CpuCore { get; set; }

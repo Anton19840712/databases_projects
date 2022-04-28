@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -13,6 +13,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			InvoicePaymentRequisites = new HashSet<InvoicePaymentRequisiteDal>();
 		}
 
+		[Key]
 		public long InvoicePaymentId { get; set; }
 		public long InvoiceId { get; set; }
 		public DateTime PaymentDate { get; set; }

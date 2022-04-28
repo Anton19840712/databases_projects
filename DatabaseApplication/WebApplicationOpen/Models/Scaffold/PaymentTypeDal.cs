@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Invoices = new HashSet<InvoiceDal>();
 		}
 
+		[Key]
 		public int PaymentTypeId { get; set; }
 		public string Description { get; set; }
 

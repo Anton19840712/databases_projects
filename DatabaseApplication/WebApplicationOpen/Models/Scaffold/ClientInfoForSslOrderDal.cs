@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("ClientInfoForSslOrder")]
 	public class ClientInfoForSslOrderDal
 	{
+		[Key]
 		public long Id { get; set; }
 		public int ClientTypeId { get; set; }
 		public int CountryId { get; set; }

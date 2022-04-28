@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			UnsentMails = new HashSet<UnsentMailDal>();
 		}
 
+		[Key]
 		public int EmailFromId { get; set; }
 		public string From { get; set; }
 

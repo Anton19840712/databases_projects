@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			ServiceNotificationQueues = new HashSet<ServiceNotificationQueueDal>();
 		}
 
+		[Key]
 		public int NotificationEventId { get; set; }
 		public string Description { get; set; }
 

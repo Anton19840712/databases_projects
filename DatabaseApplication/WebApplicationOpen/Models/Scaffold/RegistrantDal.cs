@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -14,6 +14,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Domains = new HashSet<DomainDal>();
 		}
 
+		[Key]
 		public long RegistrantId { get; set; }
 		public string Name { get; set; }
 		public string ChiefName { get; set; }

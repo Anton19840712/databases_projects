@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -14,7 +14,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Statistics = new HashSet<StatisticDal>();
 			TariffPlans = new HashSet<TariffPlanDal>();
 		}
-
+		[Key]
 		public int DomainZoneId { get; set; }
 		public string Name { get; set; }
 		public string Label { get; set; }

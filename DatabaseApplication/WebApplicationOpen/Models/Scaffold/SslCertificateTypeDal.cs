@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -13,6 +13,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			SslTariffSettings = new HashSet<SslTariffSettingDal>();
 		}
 
+		[Key]
 		public int SslCertificateTypeId { get; set; }
 		public string Description { get; set; }
 

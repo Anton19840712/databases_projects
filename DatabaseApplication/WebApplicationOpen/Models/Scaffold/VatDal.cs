@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -14,6 +14,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			ServiceHistories = new HashSet<ServiceHistoryDal>();
 		}
 
+		[Key]
 		public long VatId { get; set; }
 		public int Value { get; set; }
 		public DateTime StartDate { get; set; }

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("SystemNotification")]
 	public class SystemNotificationDal
 	{
+		[Key]
 		public long SystemNotificationId { get; set; }
 		public int SystemNotificationTypeId { get; set; }
 		public short SystemNotificationErrorLevelTypeId { get; set; }

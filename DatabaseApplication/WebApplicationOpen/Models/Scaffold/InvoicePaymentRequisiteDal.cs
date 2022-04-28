@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("InvoicePaymentRequisite")]
 	public class InvoicePaymentRequisiteDal
 	{
+		[Key]
 		public long InvoicePaymentRequsitesId { get; set; }
 		public long InvoicePaymentId { get; set; }
 		public int CountryId { get; set; }

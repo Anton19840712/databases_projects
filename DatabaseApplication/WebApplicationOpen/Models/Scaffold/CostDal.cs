@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -15,6 +15,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			TariffPlanCosts = new HashSet<TariffPlanCostDal>();
 		}
 
+		[Key]
 		public long CostId { get; set; }
 		public int CurrencyId { get; set; }
 		public decimal Value { get; set; }

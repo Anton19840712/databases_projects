@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("ClientRequisitesHistory")]
 	public class ClientRequisitesHistoryDal
 	{
+		[Key]
 		public long ClientRequisitesHistoryId { get; set; }
 		public long ClientId { get; set; }
 		public DateTime Date { get; set; }

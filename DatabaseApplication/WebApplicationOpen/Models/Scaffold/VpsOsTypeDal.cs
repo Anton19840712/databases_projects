@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			VpsConfigs = new HashSet<VpsConfigDal>();
 		}
 
+		[Key]
 		public int VpsOsTypeId { get; set; }
 		public string Uuid { get; set; }
 		public string InternalName { get; set; }

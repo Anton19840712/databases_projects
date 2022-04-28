@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("Call")]
 	public class CallDal
 	{
+		[Key]
 		public long Id { get; set; }
 		public string Comment { get; set; }
 		public string Phone { get; set; }

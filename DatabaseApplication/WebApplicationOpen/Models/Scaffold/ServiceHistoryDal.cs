@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -16,6 +16,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			Statistics = new HashSet<StatisticDal>();
 		}
 
+		[Key]
 		public long ServiceHistoryId { get; set; }
 		public long ClientId { get; set; }
 		public long? DomainHistoryId { get; set; }

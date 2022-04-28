@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("DelayLock")]
 	public class DelayLockDal
 	{
+		[Key]
 		public long DelayLockId { get; set; }
 		public long ServiceId { get; set; }
 		public int DelayLockTypeId { get; set; }

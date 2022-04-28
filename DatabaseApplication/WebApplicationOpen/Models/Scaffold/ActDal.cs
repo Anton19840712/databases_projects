@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace WebApplicationOpen.Models.Scaffold
@@ -7,6 +8,7 @@ namespace WebApplicationOpen.Models.Scaffold
 	[Table("Act")]
 	public class ActDal
 	{
+		[Key]
 		public long ActId { get; set; }
 		public long ServiceHistoryId { get; set; }
 		public long CostId { get; set; }

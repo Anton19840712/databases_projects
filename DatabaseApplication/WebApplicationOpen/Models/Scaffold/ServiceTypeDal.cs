@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -16,6 +16,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			TariffPlans = new HashSet<TariffPlanDal>();
 		}
 
+		[Key]
 		public int ServiceTypeId { get; set; }
 		public string Description { get; set; }
 		public int ServiceClassId { get; set; }

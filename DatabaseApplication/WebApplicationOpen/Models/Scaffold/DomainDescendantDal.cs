@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
 	[Table("DomainDescendant")]
 	public class DomainDescendantDal
 	{
+		[Key]
 		public long DomainDescendantId { get; set; }
 		public string Name { get; set; }
 		public long DomainId { get; set; }

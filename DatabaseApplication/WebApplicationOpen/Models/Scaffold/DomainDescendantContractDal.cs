@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,7 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 		{
 			DomainDescendants = new HashSet<DomainDescendantDal>();
 		}
-
+		[Key]
 		public long DescendantContractId { get; set; }
 		public string ApplicantPosition { get; set; }
 		public string ApplicantName { get; set; }

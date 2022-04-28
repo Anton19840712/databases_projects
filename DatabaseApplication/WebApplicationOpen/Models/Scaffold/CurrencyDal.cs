@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -15,7 +15,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			PromoCodeDiscountValues = new HashSet<PromoCodeDiscountValueDal>();
 			VpsConfigItemsCosts = new HashSet<VpsConfigItemsCostDal>();
 		}
-
+		[Key]
 		public int CurrencyId { get; set; }
 		public string CurrencyName { get; set; }
 		public bool? IsArchive { get; set; }

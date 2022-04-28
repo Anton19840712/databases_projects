@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationOpen.Models.Scaffold
 {
@@ -12,6 +12,7 @@ namespace WebApplicationOpen.Models.Scaffold
 			VerificationLogs = new HashSet<VerificationLogDal>();
 		}
 
+		[Key]
 		public long VerificationResultId { get; set; }
 		public long ClientId { get; set; }
 		public int VerificationFieldId { get; set; }
