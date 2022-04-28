@@ -3,7 +3,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplicationOpen.Contexts;
-using WebApplicationOpen.Models.Scaffold;
+using WebApplicationOpen.Models;
+using WebApplicationOpen.Models.DalModels.Users;
 
 namespace WebApplicationOpen.Controllers
 {
@@ -22,7 +23,7 @@ namespace WebApplicationOpen.Controllers
 		[Route("all")]
 		public async Task<List<UserDal>> GetAllUsers()
 		{
-			return await _context.Users.ToListAsync();
+			return await _context.Users.Include(x=>x.Clients).ToListAsync();
 		}
 	}
 }
