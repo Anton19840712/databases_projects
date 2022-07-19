@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using Bogus;
-using Person = DataGeneratorSample.Models.Person;
 
 namespace DataGeneratorSample.Repositories
 {
     public static class PersonRepository
     {
-        public static List<Person> GeneratePersonModel(int maxNumberOfRows)
+        public static List<Person.Person> GeneratePersonModel(int maxNumberOfRows)
         {
             var idsPerson = 1;
-            var personGenerator = new Faker<Person>()
+            var personGenerator = new Faker<Person.Person>()
                 .RuleFor(o => o.PersonId, f => idsPerson++)
                 .RuleFor(o => o.FirstName, f => f.Person.FirstName)
                 .RuleFor(o => o.LastName, f => f.Person.LastName)

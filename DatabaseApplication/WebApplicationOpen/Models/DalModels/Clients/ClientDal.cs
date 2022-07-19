@@ -71,6 +71,8 @@ namespace WebApplicationOpen.Models.DalModels.Clients
 		public ClientTypeDal ClientType { get; set; }
 		public ContactRequisiteDal ContactRequisite { get; set; }
 		public CountryDal Country { get; set; }
+
+		[NotMapped]
 		public CurrencyDal DefaultUserCurrencyNavigation { get; set; }
 		public EgrRequisiteDal EgrRequisites { get; set; }
 		public JuridicalRequisiteDal JuridicalRequisites { get; set; }

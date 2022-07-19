@@ -1,49 +1,50 @@
-﻿using System.Threading.Tasks;
-using DataGeneratorSample.Contexts;
+﻿using DataGeneratorSample.Contexts;
 using DataGeneratorSample.Repositories;
+using System.Threading.Tasks;
+using DataGeneratorSample.Models.Geography;
 
 namespace DataGeneratorSample
 {
-    class Program
-    {
-        private static async Task Main()
-        {
-            var context = new EntitiesDbContext();
+	class Program
+	{
+		static void Main()
+		{
+			var context = new EntitiesDbContext();
 
-            var maxNumberOfRows = 1000;
+			var maxNumberOfRows = 1000;
 
-            var vehicles = VehicleRepository.GenerateListOfVehicles(maxNumberOfRows);
+			//var vehicles = VehicleRepository.GenerateListOfVehicles(maxNumberOfRows);
 
-            var persons = PersonRepository.GeneratePersonModel(maxNumberOfRows);
+			//var persons = PersonRepository.GeneratePersonModel(maxNumberOfRows);
 
-            var orders = OrderRepository.GenerateOrderList(maxNumberOfRows);
+			//var orders = OrderRepository.GenerateOrderList(maxNumberOfRows);
 
-            var categories = CategoryRepository.GenerateCategoryList(maxNumberOfRows);
+			//var categories = CategoryRepository.GenerateCategoryList(maxNumberOfRows);
 
-            var products = ProductRepository.GenerateProductList(maxNumberOfRows);
+			//var products = ProductRepository.GenerateProductList(maxNumberOfRows);
 
-            var orderProducts = OrderProductRepository.GenerateOrderProductList(maxNumberOfRows);
+			//var orderProducts = OrderProductRepository.GenerateOrderProductList(maxNumberOfRows);
 
-            var personAddresses = PersonAddressRepository.GenerateListOfAddresses(maxNumberOfRows);
+			//var personAddresses = PersonAddressRepository.GenerateListOfAddresses(maxNumberOfRows);
 
-            context.Vehicles.AddRange(vehicles);
+			//var cities = CityRepository.GenerateListOfCities(maxNumberOfRows);
 
-            context.Orders.AddRange(orders);
+			//context.Vehicles.AddRange(vehicles);
 
-            context.Categories.AddRange(categories);
+			//context.Orders.AddRange(orders);
 
-            context.Products.AddRange(products);
+			//context.Categories.AddRange(categories);
 
-            context.OrderProducts.AddRange(orderProducts);
+			//context.Products.AddRange(products);
 
-            context.Persons.AddRange(persons);
+			//context.OrderProducts.AddRange(orderProducts);
 
-            context.PersonAddresses.AddRange(personAddresses);
+			//context.Persons.AddRange(persons);
 
-            await context.SaveChangesAsync();
+			//context.PersonAddresses.AddRange(personAddresses);
 
-            // var addresses = repository.GenerateListOfPersons();
-            // Console.WriteLine(JsonConvert.SerializeObject(addresses, Formatting.Indented));
-        }
-    }
+			// var addresses = repository.GenerateListOfPersons();
+			// Console.WriteLine(JsonConvert.SerializeObject(addresses, Formatting.Indented));
+		}
+	}
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Bogus;
-using DataGeneratorSample.Models;
+using DataGeneratorSample.Person;
 
 namespace DataGeneratorSample.Repositories
 {

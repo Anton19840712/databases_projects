@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DataGeneratorSample.Models
+namespace DataGeneratorSample.Models.Load
 {
     public class Category
     {

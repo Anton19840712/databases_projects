@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32328.378
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{DC3F48BA-7EEB-4290-86F7-5533D3F55AAC}"
 EndProject
@@ -52,9 +52,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQlNorthwind", "GraphQl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppOpenContactDatabaseFirstApproach", "ConsoleAppOpenContactDatabaseFirstApproach\ConsoleAppOpenContactDatabaseFirstApproach.csproj", "{D7B747EF-0B0A-471D-8797-FA6A52EEB5E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationOpenContact", "WebApplicationOpenContact\WebApplicationOpenContact.csproj", "{D2764C59-FBB7-4AEF-869D-AEF4B5D59BEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplicationOpenContact", "WebApplicationOpenContact\WebApplicationOpenContact.csproj", "{D2764C59-FBB7-4AEF-869D-AEF4B5D59BEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationOpen", "WebApplicationOpen\WebApplicationOpen.csproj", "{B91B1512-F410-444D-A247-179F32878F69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplicationOpen", "WebApplicationOpen\WebApplicationOpen.csproj", "{B91B1512-F410-444D-A247-179F32878F69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Include", "Include\Include.csproj", "{730226D0-F7C5-4465-BEA2-98E4E279A460}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoCarTest", "MongoCarTest\MongoCarTest.csproj", "{582127DF-8D80-4D71-BA32-85AB4D593832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgresqlEfCoreConsoleApp", "PostgresqlEfCoreConsoleApp\PostgresqlEfCoreConsoleApp.csproj", "{5CD42576-A72E-4CEA-84D2-BA7A254F7CA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -150,6 +156,18 @@ Global
 		{B91B1512-F410-444D-A247-179F32878F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B91B1512-F410-444D-A247-179F32878F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B91B1512-F410-444D-A247-179F32878F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{730226D0-F7C5-4465-BEA2-98E4E279A460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{730226D0-F7C5-4465-BEA2-98E4E279A460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{730226D0-F7C5-4465-BEA2-98E4E279A460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{730226D0-F7C5-4465-BEA2-98E4E279A460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582127DF-8D80-4D71-BA32-85AB4D593832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582127DF-8D80-4D71-BA32-85AB4D593832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582127DF-8D80-4D71-BA32-85AB4D593832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582127DF-8D80-4D71-BA32-85AB4D593832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD42576-A72E-4CEA-84D2-BA7A254F7CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD42576-A72E-4CEA-84D2-BA7A254F7CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD42576-A72E-4CEA-84D2-BA7A254F7CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD42576-A72E-4CEA-84D2-BA7A254F7CA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using DataGeneratorSample.Models.Geography;
 
-namespace DataGeneratorSample.Models
+namespace DataGeneratorSample.Models.Load
 {
     public class Company
     {
@@ -9,6 +10,6 @@ namespace DataGeneratorSample.Models
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
         public virtual ICollection<Country> Countries { get; set; }
-        public virtual ICollection<Person> Persons { get; set; }
+        public virtual ICollection<Person.Person> Persons { get; set; }
     }
 }

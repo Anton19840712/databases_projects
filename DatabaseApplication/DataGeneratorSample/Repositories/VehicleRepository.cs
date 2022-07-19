@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Bogus;
-using Vehicle = DataGeneratorSample.Models.Vehicle;
+using Vehicle = DataGeneratorSample.Models.Transport.Vehicle;
 
 namespace DataGeneratorSample.Repositories
 {

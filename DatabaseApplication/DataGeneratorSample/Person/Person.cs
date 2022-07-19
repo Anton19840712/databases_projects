@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DataGeneratorSample.Models.Load;
+using DataGeneratorSample.Models.Transport;
 
-namespace DataGeneratorSample.Models
+namespace DataGeneratorSample.Person
 {
     public class Person
     {

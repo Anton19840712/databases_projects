@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using DataGeneratorSample.Models.Load;
 
-namespace DataGeneratorSample.Models
+namespace DataGeneratorSample.Models.Company
 {
     public class Shipper
     {

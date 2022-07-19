@@ -7,7 +7,7 @@ using WebApplicationOpen.Models.DalModels.Vps;
 
 namespace WebApplicationOpen.Models.DalModels.Billing
 {
-	[Table("Currency")]
+	[Table("Currencies")]
 	public sealed class CurrencyDal
 	{
 		public CurrencyDal()

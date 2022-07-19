@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DataGeneratorSample.Models
+namespace DataGeneratorSample.Models.Transport
 {
     public class Vehicle
     {
@@ -16,6 +16,6 @@ namespace DataGeneratorSample.Models
 
         [ForeignKey("Person")]
         public long PersonId { get; set; }
-        public Person CurrentPerson { get; set; }
+        public Person.Person CurrentPerson { get; set; }
     }
 }
